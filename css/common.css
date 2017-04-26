@@ -133,6 +133,7 @@ h5{
 }
 #region .common-regionCon ul:nth-of-type(2) li{
 	position: relative;	
+	border-bottom: 1px solid #eeeeee;
 }
 #region .common-regionCon ul:nth-of-type(2) li a{
 	display: block;	
@@ -141,7 +142,7 @@ h5{
 	color: #555;
 	font-weight: 600;
 	font-size: 14px;
-	border-bottom: 1px solid #eeeeee;
+	
 }
 #region .common-regionCon ul:nth-of-type(2) li:hover{
 	background: #f1f1f1;
@@ -287,10 +288,55 @@ h5{
 	font-size: 14px;
 }
 
-
-
-
-
+/*导航部分*/
+.common-header>.content{
+	height: 120px;
+	padding: 20px 0;
+}
+.common-header>.content .navbar{
+	width: 100%;
+	height: 120px;
+}
+.common-header>.content .navbar .navbar-logo{
+	width: 300px;
+	height: 80px;
+}
+.common-header>.content .navbar .navbar-list{
+	height: 80px;
+	/*background: green;*/
+	padding-left: 40px;
+	font-family: "微软雅黑";
+	
+}
+.common-header>.content .navbar .navbar-list li{
+	float: left;
+	position: relative;
+}
+.common-header>.content .navbar .navbar-list li a{
+	display: block;
+	padding: 0 25px;
+	margin: 20px 0;
+	text-align: center;
+	font-size: 15px;
+	color: #999;
+    border-right: 1px solid #eee;
+}
+.common-header>.content .navbar .navbar-list li:last-child a{
+	border: 0;
+}
+.common-header>.content .navbar .navbar-list li span{
+	display: block;
+}
+.common-header>.content .navbar .navbar-list li:hover a{
+	background: #eee;
+}
+.common-header>.content .navbar .navbar-list li em{
+	position: absolute;
+    left: 5%;
+    bottom: -18px;
+    width: 90%;
+    border-bottom: 2px solid #64a131;
+}
 
 
 
