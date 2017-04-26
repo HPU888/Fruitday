@@ -5,6 +5,8 @@
 		<title>天天果园-水果网购|生鲜食品|蔬菜配送首选品牌，只为一份极致</title>
 		<link rel="stylesheet" type="text/css" href="css/common.css"/>
 		<link rel="stylesheet" type="text/css" href="css/home.css"/>
+		<script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.8.3/jquery.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
 	</head>
 	<body>
 		<section class="common-header">
@@ -12,14 +14,14 @@
 				<div class="content topnav-m">
 					<span class="flt">
 						<span class="flt common-region" id="region">
-							<i class="iconfont">&#xe64e;</i>
+							<i class="iconfont" style="width: 14px;height: 14px;font-size: 14px;color: #64A131;">&#xe64e;</i>
 							<a href="javascript:;" class="topnav-region">
 								上海
 								<i class="iconfont">&#xe78a;</i>
 							</a>
 							<div class="hide common-regionCon">
 								<h5>热门城市:</h5>
-								<ul class="list-unstyled">
+								<ul class="list-unstyled hotcity">
 									<li>
 										<a href="javascript:;">上海</a>
 									</li>
@@ -54,7 +56,7 @@
 											</span>
 											江苏
 										</a>
-										<div class="city" style="display: block;">
+										<div class="city" style="display: none;">
 											<a href="javascript:;">常州</a>
 											<a href="javascript:;">淮安</a>
 											<a href="javascript:;">连云港</a>
@@ -77,7 +79,7 @@
 											</span>
 											浙江
 										</a>
-										<div class="city" style="display: block;">
+										<div class="city" style="display: none;">
 											<a href="javascript:;">杭州</a>
 											<a href="javascript:;">湖州</a>
 											<a href="javascript:;">嘉兴</a>
@@ -98,7 +100,7 @@
 											</span>
 											安徽
 										</a>
-										<div class="city" style="display: block;">
+										<div class="city" style="display: none;">
 											<a href="javascript:;">安庆</a>
 											<a href="javascript:;">蚌埠</a>
 											<a href="javascript:;">亳州</a>
@@ -130,7 +132,7 @@
 											</span>
 											河北
 										</a>
-										<div class="city" style="display: block;">
+										<div class="city" style="display: none;">
 											<a href="javascript:;">石家庄</a>
 											<a href="javascript:;">廊坊</a>
 											<a href="javascript:;">承德</a>
@@ -151,7 +153,7 @@
 											</span>
 											广东
 										</a>
-										<div class="city" style="display: block;">
+										<div class="city" style="display: none;">
 											<a href="javascript:;">深圳</a>
 											<a href="javascript:;">广州</a>
 											<a href="javascript:;">珠海</a>
@@ -179,9 +181,9 @@
 							</div>
 						</span>
 						满百包邮（环郊内）
-						<a href="http://www.fruitday.com/xyd" target="_blank"  class="hover-dec">星夜达</a>
+						<a href="http://www.fruitday.com/xyd" target="_blank"  class="hover-dec color-green">星夜达</a>
 					</span>
-					<ul class="frt list-inline">
+					<ul class="frt topnav-list list-inline">
 						<li>
 							<a href="login.index" class="hover-orange">[ 登陆 ]</a> ，
 							<a href="register.index" class="hover-orange">[ 注册有惊喜 ]</a>
@@ -220,26 +222,25 @@
 								<div class="text-center">
 									<span class="color-green">下载果园app，</span>即享果园特价商品
 								</div>
-								<dl class="">
-									<dt>
+								<dl class="top-code">
+									<dt class="flt">
 										<img src="http://img1.fruitday.com/guan_ewcode2.jpg"/>
 									</dt>
-									<dd>
-										<a href="javascript:;">
+									<dd class="frt">
+										<a href="https://itunes.apple.com/us/app/tian-tian-guo-yuan-fruitday/id880977721" target="_blank">
 											<img src="http://img2.fruitday.com/guan_btn01.jpg"/>
 										</a>
-										<a href="javascript:;">
+										<a href="http://cdn.fruitday.com/fruitday.apk" target="_blank">
 											<img src="http://img2.fruitday.com/guan_btn02.jpg"/>
 										</a>
 									</dd>
 								</dl>
-								<dl class="">
-									<dt>
+								<dl class="bottom-code">
+									<dt class="flt">
 										<img src="http://img1.fruitday.com/guan_ewcode1.jpg"/>
 									</dt>
-									<dd>
-										<span class="color-green">关注果园微信</span>
-										优惠信息实时掌握
+									<dd class="frt">
+										<span class="color-green">关注果园微信</span>优惠信息实时掌握
 									</dd>
 								</dl>
 							</div>
