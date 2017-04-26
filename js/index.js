@@ -39,8 +39,17 @@ $(function () {
 		$(".navbar-list ul li em").addClass("hide");
 		$(this).siblings().removeClass("hide");
 	});
-	
-	
+	var iNum = 0;
+	var oTimer = setInterval(function () {
+		iNum ++;
+		$(".home-banner-list").animate({
+			left: -iNum * 1903
+		}, 1000);
+		if (iNum > 8) {
+			iNum = 0;
+			$(".home-banner-list").css("left", 0);
+		}
+	}, 5000);
 });
 
 
