@@ -62,10 +62,13 @@ h5{
 	
 }
 
+
 .clear{
 	clear: both;
 }
-
+.text-center{
+	text-align: center;
+}
 
 .common-header, .topnav{
 	width: 1903px;
@@ -251,9 +254,6 @@ h5{
     box-shadow: 0 10px 15px rgba(175,175,175,0.75);
     z-index: 10;	
 }
-.topnav-list .common-topsubnav .common-topcode .text-center{
-	text-align: center;
-}
 .topnav-list .common-topsubnav .common-topcode>dl{
 	clear: both;
 	display: block;
@@ -357,5 +357,167 @@ h5{
 	margin-top: 20px;
 	font-size: 12px;
 }
+
+/*公共底部区域*/
+.common-footer>.content{
+	width: 1280px;
+	margin: 40px auto;
+	font-family: "微软雅黑";
+}
+.common-footer>.content>ul{
+	padding: 20px 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin: 0;
+}
+.common-footer>.content>ul>li{
+	float: left;
+	width: 25%;
+    height: 60px;
+    padding: 0 5px;
+    border-right: 1px solid #ddd;
+    text-align: center;
+}
+.common-footer>.content>ul>li:nth-of-type(4){
+	border: 0;
+}
+/*.common-footer>.content>ul>li:nth-of-type(1){
+	background-position: 40px 0;
+}*/
+.common-icon{
+	background-image: url(../images/icon.png);
+	background-repeat: no-repeat;
+}
+.common-footer>.content>ul .p1{
+	background-position: center top;
+}
+.common-footer>.content>ul .p2{
+	background-position: center -60px;
+}
+.common-footer>.content>ul .p3{
+	background-position: center -120px;
+}
+.common-footer>.content>ul .p4{
+	background-position: center -180px;
+}
+
+
+
+
+
+.common-footer>.content>.footerbar{
+	padding: 20px 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    min-height: 160px;
+    overflow: hidden;
+}
+.common-footer>.content>.footerbar>.block4{
+    margin: 0 85px;
+    width: 315px;
+    height: 145px;
+    text-align: center;
+}
+.common-footer>.content>.footerbar>.block4 .serve{
+	font-size: 18px;
+	color: #555;
+}
+.common-footer>.content>.footerbar>.block4 .serve span{
+	color: #999;
+}
+.common-footer>.content>.footerbar>.block4 .logo{
+	width: 100%;
+    height: 82px;
+    background: url(../images/logo.svg) no-repeat 0 0;
+    background-size: cover;
+}
+.common-footer>.content>.footerbar>.block4 .tel{
+	margin: 5px 0;
+}
+.common-footer>.content>.footerbar>.block2 li{
+	float: left;
+    width: 130px;
+    text-align: center;
+    margin-right: 45px;
+    color: #999;
+}
+.common-footer>.content>.footerbar>.block2 li img{
+	width: 100%;
+	margin-bottom: 10px;
+}
+.common-footer>.content>.footerbar>.block2 li span{
+	font-size: 14px;
+}
+.common-footer>.content>.footerbar>.block3 li{
+	float: left;
+	margin-left: 30px;
+}
+.common-footer>.content>.footerbar>.block3 li h4{
+	font-size: 16px;
+	margin-bottom: 20px;
+	margin-top: 10px;
+	font-family: inherit;
+	color: inherit;
+	font-weight: 500;
+}
+.common-footer>.content>.footerbar>.block3 li a{
+	display: block;
+    color: #999;
+    line-height: 30px;
+    font-size: 14px;
+}
+.common-footer>.content>.footerbar>.block3 li a:hover{
+	color: #64a131;
+	text-decoration: underline;
+}
+.common-footer>.content>.copyright{
+	
+}
+.common-footer>.content>.copyright>p{
+	margin-bottom: 5px;
+	font-size: 14px;
+}
+.common-footer>.content>.copyright>p a:hover{
+	text-decoration: underline;
+}
+.common-footer>.content>.copyright>p:first-child{
+	color: #999;
+}
+.common-footer>.content>.copyright>p:nth-of-type(2){
+	color: #64a131;
+}
+.common-footer>.content>.copyright .police .goverment img{
+	width: auto;
+	height: 100%;
+}
+.common-footer>.content>.copyright .police .goverment{
+	display: inline-block;
+    width: 42px;
+    height: 42px;
+    margin: 0 10px;
+    text-align: center;
+}
+
+/*右下角图标*/
+.common-footbar{
+	position: fixed;
+    bottom: 2px;
+    right: 0;
+    z-index: 9999;
+    width: 35px;
+    height: 109px;
+    background: url(../images/kf.png) no-repeat;
+}
+.common-footbar a{
+	display: block;
+	width: 35px;
+	height: 35px;
+}
+.common-footbar a:nth-of-type(2){
+	margin: 2px 0;
+}
+
+
+
 
 
