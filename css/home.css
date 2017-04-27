@@ -9,21 +9,21 @@
 }
 .home-banner .frame{
 	position: relative;
-	width: 1903px;
+	width: 100%;
 	height: 100%;
 	margin: 0 auto;
 	overflow: hidden;
 }
 .home-banner .frame .home-banner-list{
 	height: 100%;
-	width: 17127px;
+	/*width: 17127px;
 	position: absolute;
 	left: 0;
-	top: 0;
+	top: 0;*/
 }
 .home-banner .frame .home-banner-list>li{
 	float: left;
-	width: 1903px;
+	width: 100%;
 	height: 100%;
 }
 .home-banner .frame .home-banner-list>li>a{
@@ -37,25 +37,147 @@
 }
 
 
+/*中部广告*/
+.show-ad{
+	width: 1280px;
+	margin: 0 auto;
+	margin-top: 10px;
+	margin-bottom: 50px;
+}
+.show-ad ul li{
+	float: left;
+	margin-right: 26px;
+}
+.show-ad ul li:last-child{
+	margin: 0;
+}
+.show-ad ul li>a{
+	display: block;
+	width: 300px;
+	height: 140px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*果园推荐*/
+.fruit-kinds{
+	position: relative;
+	width: 100%;
+	margin-bottom: 50px;
+	box-sizing: border-box;
+}
+.fruit-kinds>.title{
+	width: 1280px;
+    margin: 0 auto;
+    padding: 15px 0 10px;
+    height: 67px;
+    font-size: 14px;
+    line-height: 42px;
+    color: #333;
+    font-family: "微软雅黑";
+    border-top: 1px solid #ccc;
+}
+.fruit-kinds>.title>.title-pic{
+	height: 100%;
+}
+.fruit-kinds>.title>.title-pic img{
+	height: 100%;
+}
+.fruit-kinds>.title>.more{
+	color: #333;
+}
+.fruit-kinds>.title>.more:hover{
+	text-decoration: underline;
+}
+.fruit-kinds .good-list>ul{
+	width: 1290px;
+	margin: 0 auto;
+}
+.fruit-kinds .good-list>ul li{
+	float: left;
+}
+.fruit-kinds .good-list ul li img{
+	width: 100%;
+	height: 100%;
+	transition: .3s;
+}
+.fruit-kinds .good-list ul li img:hover{
+	transform: scale(1.1);
+}
+.fruit-kinds .good-list .pro-main{
+	width: 248px;
+	margin: 0 5px;
+}
+.fruit-kinds .good-list .pro-main .s-img{
+	width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+.fruit-kinds .good-list .pro-list{
+	position: relative;
+	width: 248px;
+	height: 305px;
+	margin: 0 5px 5px;
+}
+.fruit-kinds .good-list .pro-list .s-img{
+	margin-bottom: 5px;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.fruit-kinds .good-list .pro-list .s-info{
+	position: relative;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-family: 'Hiragino Sans GB','微软雅黑',sans-serif;
+    line-height: 24px;
+    cursor: pointer;
+}
+.fruit-kinds .good-list .pro-list .s-info .s-name{
+	padding-left: 2px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #555;
+    max-width: 210px;
+}
+.fruit-kinds .good-list .pro-list .s-info .s-price{
+	margin-left: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #999;
+}
+.fruit-kinds .good-list .pro-list .s-info .s-cart{
+	position: absolute;
+    top: auto;
+    bottom: 5px;
+    right: 2px;
+    width: 34px;
+    height: 34px;
+    background: url(../images/icons.png) no-repeat -517px -243px;
+}
+.fruit-kinds .good-list .pro-list .s-discount{
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.fruit-kinds .good-list .pro-list .s-discount .s-discount-span{
+	padding: 3px 5px;
+	color: #fff;
+	font-family: "微软雅黑";
+	font-size: 14px;
+}
+.fruit-kinds .ad{
+	width: 1280px;
+	margin: 20px auto 0;
+}
+.fruit-kinds .ad a{
+	display: block;
+	width: 100%;
+}
+.fruit-kinds .ad a img{
+	width: 100%;
+}
 
 
 
