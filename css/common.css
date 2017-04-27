@@ -5,7 +5,6 @@
 }
 ul,ol{
 	list-style: none;
-	overflow: hidden;
 }
 a{
 	text-decoration: none;
@@ -17,6 +16,10 @@ img{
 
 h5{
 	font-size: 14px;
+}
+body,html{
+	font-size: 14px;
+	font-family: "微软雅黑";
 }
 
 @font-face {
@@ -66,6 +69,10 @@ h5{
 .clear{
 	clear: both;
 }
+.clearfix{
+	overflow: hidden;
+}
+
 .text-center{
 	text-align: center;
 }
@@ -111,85 +118,85 @@ h5{
 	padding: 10px;
 	background: #fff;
 	box-shadow: 0 10px 15px rgba(175,175,175,0.75);
-	overflow-y: scroll;
+	overflow: auto;
 }
 #region .common-regionCon h5{
 	color: #999;
 	padding: 10px 5px;
 	margin: 0;
+	font-family: inherit;
+    font-weight: 500;
 }
 #region .common-regionCon .hotcity{
-	width: 100%;
-	height: 30px;
 	background: #f1f1f1;
 }
 #region .common-regionCon .hotcity>li{
 	float: left;
-	line-height: 30px;
 	font-size: 14px;
 	margin: 0 5px;
 }
 #region .common-regionCon .hotcity>li a{
 	color: #555;
-	font-weight: 600;
-	font-size: 14px;
+	font-family: "微软雅黑";
 }
 #region .common-regionCon .hotcity>li a:hover{
 	color: #64A131;
 	text-decoration: underline;
 }
-#region .common-regionCon ul:nth-of-type(2){
+#region .common-regionCon .hotcity-list{
 	margin-top: -5px;
 }
-#region .common-regionCon ul:nth-of-type(2) li{
-	position: relative;	
+#region .common-regionCon .hotcity-list li{
+	position: relative;
+	border-bottom: 1px solid #eee;	
 }
-#region .common-regionCon ul:nth-of-type(2) li>a{
+#region .common-regionCon .hotcity-list li>a{
 	display: block;	
 	padding: 5px 10px;
-	line-height: 20px;
+	line-height: 24px;
 	color: #555;
-	font-weight: 600;
+	font-family: "微软雅黑";
 	font-size: 14px;
-	border-bottom: 1px solid #eeeeee;
 }
-#region .common-regionCon ul:nth-of-type(2) li>a:hover{
+#region .common-regionCon .hotcity-list>li>a:hover{
 	color: #64A131;
 	background: #f1f1f1;
 }
-#region .common-regionCon ul:nth-of-type(2) li .city{
+/*#region .common-regionCon .hotcity-list>li .city{
 	background: #fff;
-}
-#region .common-regionCon ul:nth-of-type(2) li .city>a{
+}*/
+#region .common-regionCon .hotcity-list>li>.city>a{
 	display: block;
 	padding: 5px 20px;
-	width: 238px;
 	line-height: 24px;
 	color: #555;
-	font-weight: 600;
-	border-bottom: 1px dashed #eee;
 	font-size: 14px;
+	font-family: "微软雅黑";
+	border-top: 1px dashed #eee;
 }
-#region .common-regionCon ul:nth-of-type(2) li .city>a:hover{
+#region .common-regionCon .hotcity-list>li .city>a:hover{
 	color: #64A131;
 }
 
-.topnav-list li{
+.topnav-list>li{
 	float: left;
 	position: relative;
 	padding: 0 8px;
 }
-.topnav-list li:first-child{
+.topnav-list>li:first-child{
 	padding-right: 0;
 }
-.topnav-list li a{
+.topnav-list>li a{
 	color: #999;
+}
+.topnav-list .common-topsubnav{
+	cursor: pointer;
 }
 .topnav-list .common-topsubnav .common-noticelist{
 	position: absolute;
 	right: 0;
 	top: 30px;
-	width: 245px;
+	width: 240px;
     max-height: 160px;
     padding: 10px 15px 5px;
     background: #fff;
@@ -198,27 +205,31 @@ h5{
     box-shadow: 0 10px 15px rgba(175,175,175,0.75);
     z-index: 10;
 }
+.topnav-list .common-topsubnav .common-noticelist>ul{
+	margin-bottom: 5px;
+}
 .topnav-list .common-topsubnav .common-noticelist>ul>li{
 	width: 100%;
+	height: 36px;
 	line-height: 36px;
     border-bottom: 1px dashed #ddd;  
     color: #423c5b;
 }
 .topnav-list .common-topsubnav .common-noticelist>ul>li a{
 	float: left;
-    max-width: 170px;
+    max-width: 172px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
     color: #555;
+    font-size: 12px;
 }
 .topnav-list .common-topsubnav .common-noticelist>ul>li em{
 	display: inline-block;
-    padding: 0 3px;
+    padding: 0 5px;
     margin-left: 3px;
     background: #f53030;
     border-radius: 3px;
-    height: 16px;
     font-size: 12px;
     line-height: 16px;
     color: #fff;
@@ -227,14 +238,10 @@ h5{
 .topnav-list .common-topsubnav .common-noticelist>ul>li:hover a{
 	color: #64A131;
 }
-.topnav-list .common-topsubnav .text-center a{
-	display: block;
-	width: 100%;
-	line-height: 30px;
-	text-align: center;
+.topnav-list .common-topsubnav .common-noticelist>.text-center a{
 	color: #63A35C;
 }
-.topnav-list .common-topsubnav .text-center a:hover{
+.topnav-list .common-topsubnav .common-noticelist>.text-center a:hover{
 	text-decoration: underline;
 }
 .topnav-list .common-topsubnav .iconfont{
@@ -255,7 +262,7 @@ h5{
     z-index: 10;	
 }
 .topnav-list .common-topsubnav .common-topcode>dl{
-	clear: both;
+	overflow: hidden;
 	display: block;
 	cursor: pointer;
 }
@@ -308,6 +315,10 @@ h5{
 	height: 120px;
 }
 .common-header>.content .navbar .navbar-logo{
+	width: 300px;
+	height: 80px;
+}
+.common-header>.content .navbar .navbar-logo img{
 	width: 300px;
 	height: 80px;
 }
@@ -381,9 +392,6 @@ h5{
 .common-footer>.content>ul>li:nth-of-type(4){
 	border: 0;
 }
-/*.common-footer>.content>ul>li:nth-of-type(1){
-	background-position: 40px 0;
-}*/
 .common-icon{
 	background-image: url(../images/icon.png);
 	background-repeat: no-repeat;
@@ -400,10 +408,6 @@ h5{
 .common-footer>.content>ul .p4{
 	background-position: center -180px;
 }
-
-
-
-
 
 .common-footer>.content>.footerbar{
 	padding: 20px 0;
@@ -516,6 +520,127 @@ h5{
 .common-footbar a:nth-of-type(2){
 	margin: 2px 0;
 }
+
+/*遮罩层*/
+.zhezhao{
+	position: fixed;
+    z-index: 9999;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .5;
+}
+
+/*购物车*/
+.shop-cart{
+	position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 99999;
+    width: 524px;
+    height: 288px;
+    padding: 6px;
+    margin: 0 auto;
+    margin: -144px 0 0 -262px;
+    border: 8px;
+    border-color: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.16);
+}
+.shop-cart .shopcart-top{
+	height: 40px;
+    padding-right: 17px;
+    background-color: #eaeaea;
+}
+.shop-cart .shopcart-top .cha{
+	margin-top: 10px;
+	cursor: pointer;
+}
+.shop-cart .shopcart-content .cart-title{
+	padding: 28px 90px 0;
+    margin-bottom: 22px;
+    overflow: hidden;
+}
+.shop-cart .shopcart-content .cart-title .suc{
+	width: 60px;
+    height: 68px;
+    background: url(../images/icons.png) no-repeat -8px -247px;
+}
+.shop-cart .shopcart-content .cart-title .adds{
+	font-size: 30px;
+    margin: 13px 0;
+    font-family: "Hiragino Sans GB","微软雅黑",sans-serif;
+    color: #555;
+    white-space: nowrap;
+    padding-left: 20px;
+}
+.shop-cart .shopcart-content .row2{
+	font-size: 18px;
+    font-family: "Hiragino Sans GB","微软雅黑",sans-serif;
+    color: #999;
+    white-space: nowrap;
+    padding-left: 4px;
+    text-align: center;
+}
+.shop-cart .shopcart-content .row2 em{
+	color: #f6ab00;
+    font-style: normal;
+}
+.shop-cart .shopcart-content .buy{
+	padding: 28px;
+	padding-bottom: 25px;
+	overflow: hidden;
+}
+.shop-cart .shopcart-content .buy .fr-buy{
+	margin-left: 70px;
+	margin-right: 11px;
+}
+.fr-buy a,.fr-add a{
+	display: block;
+    width: 147px;
+    height: 40px;
+    font-family: "Hiragino Sans GB","微软雅黑",sans-serif;
+    font-size: 16px;
+    text-align: center;
+    line-height: 18px;
+    padding: 10px 16px;
+    border-radius: 4px;
+}
+.shop-cart .shopcart-content .buy .fr-buy a{
+	color: #64a131;
+    background: #f5ffed;
+    border: 1px solid #64a131;
+}
+.shop-cart .shopcart-content .buy .fr-add a{
+	color: #eff4ec;
+    background: #64a131;
+    border-color: #64a131;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

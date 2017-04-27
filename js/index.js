@@ -24,11 +24,9 @@ $(function () {
 	$(".hotcity-list li").find(".city").addClass("hide");
 	$(".hotcity-list li").click(function (){
 		if ($(this).find(".city").hasClass("hide")) {
-			$(this).find(".province").css("border-bottom", "1px dashed #eee");
 			$(this).find(".city").toggle(300).removeClass("hide");
 		}else {
 			$(this).find(".city").toggle(300).addClass("hide");
-			$(this).find(".province").css("border-bottom", "1px solid #eee");
 		}
 		
 	});
@@ -52,6 +50,24 @@ $(function () {
 			$(".home-banner-list").css("left", 0);
 		}
 	}, 2000);
+	
+	
+	// 点击购物框出现遮罩层和购物车
+	$(".s-cart, .cha, .fr-buy").click(function () {
+		$(this).animate({
+			"background-position-y": -291,
+			"background-position-x": -514
+		}, 500);
+		$(".zhezhao").stop(true).fadeToggle(1000).toggleClass("hide");
+		$(".shop-cart").stop(true).fadeToggle(500).toggleClass("hide");
+	});
+	
+	$(".cha, .fr-buy").click(function () {
+		$(".s-cart").animate({
+			"background-position-y": -243,
+			"background-position-x": -517
+		}, 500);
+	});
 });
 
 
