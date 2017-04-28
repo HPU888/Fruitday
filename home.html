@@ -7,6 +7,7 @@
 		<link rel="stylesheet" type="text/css" href="css/home.css"/>
 		<script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.8.3/jquery.js"></script>
 		<script type="text/javascript" src="js/index.js"></script>
+		<script src="require.js" data-main="js/home-shopping"></script>
 	</head>
 	<body>
 		<section class="common-header">
@@ -43,10 +44,10 @@
 								</ul>
 								<h5>选择城市:</h5>
 								<ul class="hotcity-list clearfix">
-									<li>
+									<li class="sp-city">
 										<a href="javascript:;">上海</a>
 									</li>
-									<li>
+									<li class="sp-city">
 										<a href="javascript:;">上海崇明</a>
 									</li>
 									<li>
@@ -119,10 +120,10 @@
 											<a href="javascript:;">宜城</a>
 										</div>
 									</li>
-									<li>
+									<li class="sp-city">
 										<a href="javascript:;">北京</a>
 									</li>
-									<li>
+									<li class="sp-city">
 										<a href="javascript:;">天津</a>
 									</li>
 									<li>
@@ -295,9 +296,8 @@
 					<div class="navbar-right frt">
 						<div class="common-topsearch flt">
 							<input type="search" id="search-keyword" value="奇异果" placeholder="请输入关键字"/>
-							<input type="hidden" id="last-keyword" value="奇异果" />
 							<button id="search-buttom">
-								<i class="iconfont"></i>
+								<i class="iconfont">&#xe693;</i>
 							</button>
 							<div class="hotsearch">
 								热门：
@@ -306,9 +306,53 @@
 								<a href="http://www.fruitday.com/prolist/search/蓝莓" target="_blank">蓝莓</a>
 								<a href="http://www.fruitday.com/prolist/search/苹果" target="_blank">苹果</a>
 							</div>
-							<ul class="subsearch">
+							<ul class="subsearch hide">
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
 								<li></li>
 							</ul>
+						</div>
+						<div class="common-minicart flt">
+							<div id="minicart" class="">
+								<i class="iconfont cartbg"></i>
+								<i class="iconfont icon-cart">&#xe63f;</i>
+								<span class="cartnum">0</span>
+							</div>
+							<div class="cartcont hide">
+								<i class="iconfont">&#xe7a8;</i>
+								<ul>
+									<!--<li>
+										<a href="javascript:;">
+											<img src="images/1-1270x270-2109-6C7A8XA9.jpg"/ class="flt">
+											<div class="minicart-info">
+												<h5>洪山樱桃</h5>
+												<h5>￥178.00/2斤</h5>
+											</div>
+										</a>
+										<div class="mincart-modify">
+											<span class="minicart-act btn-minus">-</span>
+											<input class="set-num-in" type="text" value="0" />
+											<span class="minicart-act btn-plus">+</span>
+										</div>
+										<span class="mini-cartlist-delete mincart-delete">删除</span>
+									</li>-->
+								</ul>
+								<div class="cart-nothing hide">
+									<h5>购物车中还没有商品，赶紧选购吧！</h5>
+								</div>
+								<div class="minicart-pay clearfix hide">
+									<div class="flt">
+										共 <span class="color-green">2</span> 件商品
+									</div>
+									<div class="frt">
+										商品小计 <span class="color-green">998.00</span>
+									</div>
+									<button type="button" class="btn btn-success btn-lg">立即结算</button>
+								</div>
+							</div>
 						</div>
 					</div>
 				</nav>
@@ -417,7 +461,7 @@
 							<div class="s-price">
 								￥58.00/1个
 							</div>
-							<div class="s-cart" data-price="58.00">
+							<div class="s-cart" data-price="58.00" data-pid="22225" data-name="泰国蜜柚" data-unit="1个" data-src="images/good-list1-2.jpg">
 								
 							</div>
 						</div>
@@ -438,7 +482,7 @@
 							<div class="s-price">
 								￥49.80/2斤
 							</div>
-							<div class="s-cart" data-price="49.80">
+							<div class="s-cart" data-price="49.80" data-pid="22226" data-name="湖南金煌芒果" data-unit="2斤" data-src="images/good-list1-3.jpg">
 								
 							</div>
 						</div>
@@ -459,7 +503,7 @@
 							<div class="s-price">
 								￥39.00/6个
 							</div>
-							<div class="s-cart" data-price="39.00">
+							<div class="s-cart" data-price="39.00" data-pid="22227" data-name="新西兰皇后红玫瑰苹果" data-unit="6个" data-src="images/good-list1-4.jpg">
 								
 							</div>
 						</div>
@@ -480,7 +524,7 @@
 							<div class="s-price">
 								￥199.00/22个
 							</div>
-							<div class="s-cart" data-price="199.00">
+							<div class="s-cart" data-price="199.00" data-pid="22228" data-name="佳沛新西兰阳光金奇异果(巨无霸)(原箱)" data-unit="22个" data-src="images/good-list1-5.jpg">
 								
 							</div>
 						</div>
@@ -1494,7 +1538,7 @@
 						<a href="javascript:;" title="点击此按钮，到下一步确认购买信息">继续购物</a>
 					</div>
 					<div class="fr-add flt">
-						<a href="javascript:;" title="加入购物车">去结算</a>
+						<a href="shoppingcart.html" title="加入购物车">去结算</a>
 					</div>
 				</div>
 			</div>
@@ -1502,10 +1546,10 @@
 		
 		<!--右下角图标-->
 		<section class="common-footbar">
-				<a class="kq" href="javascript:;"></a>
-				<a class="kf" href="javascript:;"></a>
-				<a class="return-top" href="javascript:;"></a>
-			</section>
+			<a class="kq" href="javascript:;"></a>
+			<a class="kf" href="javascript:;"></a>
+			<a class="return-top" href="javascript:;"></a>
+		</section>
 			
 		<!--底部区域-->
 		<section class="common-footer">

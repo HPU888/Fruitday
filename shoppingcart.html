@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>购物车</title>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.8.3/jquery.js"></script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<section class="common-header">
+			<div class="topnav">
+				<div class="content topnav-m">
+					<span class="flt">
+						<span class="flt common-region" id="region">
+							<i class="iconfont" style="width: 14px;height: 14px;font-size: 14px;color: #64A131;">&#xe64e;</i>
+							<a href="javascript:;" class="topnav-region">
+								上海
+								<i class="iconfont">&#xe78a;</i>
+							</a>
+							<div class="hide common-regionCon">
+								<h5>热门城市:</h5>
+								<ul class="list-unstyled hotcity clearfix">
+									<li>
+										<a href="javascript:;">上海</a>
+									</li>
+									<li>
+										<a href="javascript:;">广州</a>
+									</li>
+									<li>
+										<a href="javascript:;">北京</a>
+									</li>
+									<li>
+										<a href="javascript:;">苏州</a>
+									</li>
+									<li>
+										<a href="javascript:;">南京</a>
+									</li>
+									<li>
+										<a href="javascript:;">深圳</a>
+									</li>
+								</ul>
+								<h5>选择城市:</h5>
+								<ul class="hotcity-list clearfix">
+									<li>
+										<a href="javascript:;">上海</a>
+									</li>
+									<li>
+										<a href="javascript:;">上海崇明</a>
+									</li>
+									<li>
+										<a href="javascript:;" class="province">
+											<span class="frt">
+												<i class="iconfont">&#xe78b;</i>
+											</span>
+											江苏
+										</a>
+										<div class="city">
+											<a href="javascript:;">常州</a>
+											<a href="javascript:;">淮安</a>
+											<a href="javascript:;">连云港</a>
+											<a href="javascript:;">南京</a>
+											<a href="javascript:;">南通</a>
+											<a href="javascript:;">苏州</a>
+											<a href="javascript:;">泰州</a>
+											<a href="javascript:;">无锡</a>
+											<a href="javascript:;">宿迁</a>
+											<a href="javascript:;">徐州</a>
+											<a href="javascript:;">盐城</a>
+											<a href="javascript:;">扬州</a>
+											<a href="javascript:;">镇江</a>
+										</div>
+									</li>
+									<li>
+										<a href="javascript:;" class="province">
+											<span class="frt">
+												<i class="iconfont">&#xe78b;</i>
+											</span>
+											浙江
+										</a>
+										<div class="city">
+											<a href="javascript:;">杭州</a>
+											<a href="javascript:;">湖州</a>
+											<a href="javascript:;">嘉兴</a>
+											<a href="javascript:;">金华</a>
+											<a href="javascript:;">丽水</a>
+											<a href="javascript:;">宁波</a>
+											<a href="javascript:;">衢州</a>
+											<a href="javascript:;">绍兴</a>
+											<a href="javascript:;">台州</a>
+											<a href="javascript:;">温州</a>
+											<a href="javascript:;">舟山</a>
+										</div>
+									</li>
+									<li>
+										<a href="javascript:;" class="province">
+											<span class="frt">
+												<i class="iconfont">&#xe78b;</i>
+											</span>
+											安徽
+										</a>
+										<div class="city">
+											<a href="javascript:;">安庆</a>
+											<a href="javascript:;">蚌埠</a>
+											<a href="javascript:;">亳州</a>
+											<a href="javascript:;">池州</a>
+											<a href="javascript:;">滁州</a>
+											<a href="javascript:;">阜阳</a>
+											<a href="javascript:;">合肥</a>
+											<a href="javascript:;">淮北</a>
+											<a href="javascript:;">淮南</a>
+											<a href="javascript:;">黄山</a>
+											<a href="javascript:;">六安</a>
+											<a href="javascript:;">马鞍山</a>
+											<a href="javascript:;">铜陵</a>
+											<a href="javascript:;">芜湖</a>
+											<a href="javascript:;">宿州</a>
+											<a href="javascript:;">宜城</a>
+										</div>
+									</li>
+									<li>
+										<a href="javascript:;">北京</a>
+									</li>
+									<li>
+										<a href="javascript:;">天津</a>
+									</li>
+									<li>
+										<a href="javascript:;" class="province">
+											<span class="frt">
+												<i class="iconfont">&#xe78b;</i>
+											</span>
+											河北
+										</a>
+										<div class="city">
+											<a href="javascript:;">石家庄</a>
+											<a href="javascript:;">廊坊</a>
+											<a href="javascript:;">承德</a>
+											<a href="javascript:;">唐山</a>
+											<a href="javascript:;">保定</a>
+											<a href="javascript:;">沧州</a>
+											<a href="javascript:;">邯郸</a>
+											<a href="javascript:;">衡水</a>
+											<a href="javascript:;">秦皇岛</a>
+											<a href="javascript:;">邢台</a>
+											<a href="javascript:;">张家口</a>
+										</div>
+									</li>
+									<li>
+										<a href="javascript:;" class="province">
+											<span class="frt">
+												<i class="iconfont">&#xe78b;</i>
+											</span>
+											广东
+										</a>
+										<div class="city">
+											<a href="javascript:;">深圳</a>
+											<a href="javascript:;">广州</a>
+											<a href="javascript:;">珠海</a>
+											<a href="javascript:;">汕头</a>
+											<a href="javascript:;">韶关</a>
+											<a href="javascript:;">佛山</a>
+											<a href="javascript:;">江门</a>
+											<a href="javascript:;">湛江</a>
+											<a href="javascript:;">茂名</a>
+											<a href="javascript:;">肇庆</a>
+											<a href="javascript:;">惠州</a>
+											<a href="javascript:;">梅州</a>
+											<a href="javascript:;">汕尾</a>
+											<a href="javascript:;">河源</a>
+											<a href="javascript:;">阳江</a>
+											<a href="javascript:;">清远</a>
+											<a href="javascript:;">东莞</a>
+											<a href="javascript:;">中山</a>
+											<a href="javascript:;">揭阳</a>
+											<a href="javascript:;">云浮</a>
+											<a href="javascript:;">潮州</a>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</span>
+						满百包邮（环郊内）
+						<a href="http://www.fruitday.com/xyd" target="_blank"  class="hover-dec color-green">星夜达</a>
+					</span>
+					<ul class="frt topnav-list list-inline">
+						<li>
+							<a href="login.index" class="hover-orange">[ 登陆 ]</a> ，
+							<a href="register.index" class="hover-orange">[ 注册有惊喜 ]</a>
+						</li>
+						<li>|</li>
+						<li class="common-topsubnav">
+							果园公告
+							<div class="common-noticelist hide">
+								<ul class="list-unstyled clearfix">
+									<li>
+										<a href="javascript:;">全仓充值活动调整公告</a>
+									</li>
+									<li>
+										<a href="javascript:;">全仓充值活动调整公告</a>
+										<em>new</em>
+									</li>
+									<li>
+										<a href="javascript:;">北京仓、广东仓充值活动调整公告</a>
+										<em>new</em>
+									</li>
+								</ul>
+								<div class="text-center">
+									<a href="javascript:;">查看更多</a>
+								</div>
+							</div>
+						</li>
+						<li>|</li>
+						<li>
+							<a href="javascript:;" class="hover-orange flt">券卡兑换</a>
+						</li>
+						<li>|</li>
+						<li class="common-topsubnav">
+							<i class="iconfont">&#x345e;</i>
+							手机果园
+							<div class="common-topcode hide">
+								<div class="text-center">
+									<span class="color-green">下载果园app，</span>即享果园特价商品
+								</div>
+								<dl class="top-code">
+									<dt class="flt">
+										<img src="http://img1.fruitday.com/guan_ewcode2.jpg"/>
+									</dt>
+									<dd class="frt">
+										<a href="https://itunes.apple.com/us/app/tian-tian-guo-yuan-fruitday/id880977721" target="_blank">
+											<img src="http://img2.fruitday.com/guan_btn01.jpg"/>
+										</a>
+										<a href="http://cdn.fruitday.com/fruitday.apk" target="_blank">
+											<img src="http://img2.fruitday.com/guan_btn02.jpg"/>
+										</a>
+									</dd>
+								</dl>
+								<dl class="bottom-code">
+									<dt class="flt">
+										<img src="http://img1.fruitday.com/guan_ewcode1.jpg"/>
+									</dt>
+									<dd class="frt">
+										<span class="color-green">关注果园微信</span>优惠信息实时掌握
+									</dd>
+								</dl>
+							</div>
+						</li>
+						<li>|</li>
+						<li>
+							<i class="iconfont">&#xe634;</i>
+							<b>400-720-0770</b>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="content">
+				<nav class="navbar">
+					<div class="navbar-logo flt">
+						<a href="http://www.fruitday.com/"><img src="images/logo.svg" /></a>
+					</div>
+					<div class="navbar-list flt">
+						<ul>
+							<li>
+								<a href="http://www.fruitday.com/">首页
+									<span>Home</span>
+								</a>
+								<em></em>
+							</li>
+							<li>
+								<a href="http://www.fruitday.com/">鲜果
+									<span>Fruit</span>
+								</a>
+								<em class="hide"></em>
+							</li>
+							<li>
+								<a href="http://http://www.fruitday.com/">生鲜
+									<span>Fresh</span>
+								</a>
+								<em class="hide"></em>
+							</li>
+							<li>
+								<a href="http://www.fruitday.com/">礼品
+									<span>Gift</span>
+								</a>
+								<em class="hide"></em>
+							</li>
+							<li>
+								<a href="http://www.fruitday.com/">会员中心
+									<span>Vip Club</span>
+								</a>
+								<em class="hide"></em>
+							</li>
+						</ul>
+					</div>
+					<div class="navbar-right frt">
+						<div class="common-topsearch flt">
+							<input type="search" id="search-keyword" value="奇异果" placeholder="请输入关键字"/>
+							<input type="hidden" id="last-keyword" value="奇异果" />
+							<button id="search-buttom">
+								<i class="iconfont">&#xe651;</i>
+							</button>
+							<div class="hotsearch">
+								热门：
+								<a href="http://www.fruitday.com/prolist/search/橙" target="_blank">橙</a>
+								<a href="http://www.fruitday.com/prolist/search/提子" target="_blank">提子</a>
+								<a href="http://www.fruitday.com/prolist/search/蓝莓" target="_blank">蓝莓</a>
+								<a href="http://www.fruitday.com/prolist/search/苹果" target="_blank">苹果</a>
+							</div>
+							<ul class="subsearch">
+								<li></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</section>
+	
+		<!--右下角图标-->
+		<section class="common-footbar">
+			<a class="kq" href="javascript:;"></a>
+			<a class="kf" href="javascript:;"></a>
+			<a class="return-top" href="javascript:;"></a>
+		</section>
+			
+		<!--底部区域-->
+		<section class="common-footer">
+				<div class="content">
+					<ul class="list-inline clearfix">
+						<li class="common-icon p1"></li>
+						<li class="common-icon p2"></li>
+						<li class="common-icon p3"></li>
+						<li class="common-icon p4"></li>
+					</ul>
+					<div class="footerbar clearfix">
+						<div class="block4 flt">
+							<div class="logo"></div>
+							<div class="tel">
+								<img src="images/guan_tel.png"/>
+							</div>
+							<div class="serve">
+								<span>电话客服</span> 09:00 - 21:00<br />
+								<span>在线客服</span> 08:00 - 24:00
+							</div>
+						</div>
+						<ul class="block2 list-unstyled flt">
+							<li>
+								<img src="images/guan_ewcode1.jpg"/>
+								<span>天天果园官方微信</span>
+							</li>
+							<li>
+								<img src="images/guan_ewcode2.jpg"/>
+								<span>天天果园APP</span>
+							</li>
+						</ul>
+						<ul class="block3 list-unstyled flt">
+							<li>
+								<h4>购物指南</h4>
+								<a href="javascript:;">新用户注册</a>
+								<a href="javascript:;">在线下单</a>
+								<a href="javascript:;">支付方式</a>
+							</li>
+							<li>
+								<h4>配送说明</h4>
+								<a href="javascript:;">运费说明</a>
+								<a href="javascript:;">运费方式</a>
+								<a href="javascript:;">发票说明</a>
+							</li>
+							<li>
+								<h4>售后服务</h4>
+								<a href="javascript:;">退换货规则</a>
+								<a href="javascript:;">服务保障承诺</a>
+								<a href="javascript:;">验货与签收</a>
+							</li>
+							<li>
+								<h4>企业服务</h4>
+								<a href="javascript:;">企业订购</a>
+								<a href="javascript:;">公司简介</a>
+								<a href="javascript:;">定制专区</a>
+							</li>
+						</ul>
+					</div>
+					<div class="copyright text-center">
+						<p class="">
+							版权所有 ©2017上海天天鲜果电子商务有限公司  保留所有权利 | 
+							<a href="javascript:;" style="color: #999;">沪ICP备12042163</a>
+						</p>
+						<p>天天果园  鲜果网购</p>
+						<div class="police">
+							<a href="javascript:;">
+								<img src="images/guan_shgs.gif"/>
+							</a>
+							<a href="javascript:;" class="goverment">
+								<img src="images/guan_wgdjp.png"/>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+	</body>
+</html>
