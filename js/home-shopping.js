@@ -1,12 +1,12 @@
 require.config({
-	jquery: "./js/jquery",
-	cookie: "./js/cookie"
+	jquery: "js/jquery",
+	cookie: "js/cookie"
 });
 
 require(["jquery", "cookie"], function ($, cookie) {
 	$(function () {
 		
-		
+		var total = 0;
 		var totalPrice = 0;
 		// 最开始从后台获取数据
 		var sCookie = cookie.getCookie("goods");
@@ -36,8 +36,8 @@ require(["jquery", "cookie"], function ($, cookie) {
 		});
 		
 		// 加减号改变商品
-			
 		$(".btn-minus").click(function () {
+			var totalPrice = 0;
 			if (parseInt($(this).next().val()) > 1) {
 				for (var i = 0; i < aCookie.length; i ++) {
 					if (aCookie[i].pid == $(this).parent().parent().data("pid")) {
@@ -48,19 +48,22 @@ require(["jquery", "cookie"], function ($, cookie) {
 						$(".cartcount").empty();
 						$(".cartcount").append(aTotal);
 						
-						totalPrice += aCookie[i].price * aCookie[i].num;
+						for (var j = 0; j < aCookie.length; j++) {
+							totalPrice += aCookie[j].price * aCookie[j].num;
+						}
 						$(".cartprice, .cartprice1").empty();
 						$(".cartprice").append("￥" + totalPrice.toFixed(2));
 						$(".cartprice1").append(totalPrice.toFixed(2));
 					}
 				}
 			}
-			
-			
+			// 存入Cookie
 			cookie.setCookie("goods", JSON.stringify(aCookie), 7);
-			cookie.setCookie("total", total, 7);
+			cookie.setCookie("total", aTotal, 7);
 		});
+		
 		$(".btn-plus").click(function () {
+			var totalPrice = 0;
 			for (var i = 0; i < aCookie.length; i ++) {
 				if (aCookie[i].pid == $(this).parent().parent().data("pid")) {
 					aCookie[i].num ++;
@@ -70,7 +73,9 @@ require(["jquery", "cookie"], function ($, cookie) {
 					$(".cartcount").empty();
 					$(".cartcount").append(aTotal);
 					
-					totalPrice += aCookie[i].price * aCookie[i].num;
+					for (var j = 0; j < aCookie.length; j++) {
+						totalPrice += aCookie[j].price * aCookie[j].num;
+					}
 					$(".cartprice, .cartprice1").empty();
 					$(".cartprice").append("￥" + totalPrice.toFixed(2));
 					$(".cartprice1").append(totalPrice.toFixed(2));
@@ -78,18 +83,19 @@ require(["jquery", "cookie"], function ($, cookie) {
 				
 				
 			}
-			
+			// 存入Cookie
 			cookie.setCookie("goods", JSON.stringify(aCookie), 7);
-			cookie.setCookie("total", total, 7);
+			cookie.setCookie("total", aTotal, 7);
 		});
+		
 		// 点击删除按钮，删除商品
 		$(".mincart-delete").click(function () {
+			var totalPrice = 0;
 			$(this).parent().remove();
 			for (var i = 0; i < aCookie.length; i ++) {
 				if (aCookie[i].pid == $(this).parent().data("pid")) {
 					aTotal -= aCookie[i].num;
 					aCookie.splice(i, 1);
-					
 					$(".cartcount").empty();
 					$(".cartcount").append(aTotal);
 					
@@ -104,24 +110,33 @@ require(["jquery", "cookie"], function ($, cookie) {
 					$(".cartprice1").append(totalPrice.toFixed(2));
 				}
 			}
-			
+			if (aCookie.length === 0 ) {
+				$(".cart-nothing").removeClass("hide");
+				$(".minicart-pay").addClass("hide");
+			}
+			// 存入Cookie
 			cookie.setCookie("goods", JSON.stringify(aCookie), 7);
-			cookie.setCookie("total", total, 7);
+			cookie.setCookie("total", aTotal, 7);
 		});
 		
-		
-		
-		
+		for (var j = 0; j < aCookie.length; j++) {
+			totalPrice += aCookie[j].price * aCookie[j].num;
+			total += aCookie[j].num;
+		}
+		// 显示总价格
+		$(".cartprice, .cartprice1").empty();
+		$(".cartprice").append("￥" + totalPrice.toFixed(2));
+		$(".cartprice1").append(totalPrice.toFixed(2));
 		// 购物车商品总数量
 		$(".cartcount").empty();
-		$(".cartcount").append(aTotal);
-		
-		
-		
+		$(".cartcount").append(total);
+
+
 		// 点击购物车添加商品
-		var total = 0;
 		$(".s-cart").click(function () {
-			
+			$(".cartcont").slideUp(50);
+			var total = 0;
+			var totalPrice = 0;
 			// 购物总数量
 			var Total = cookie.getCookie("total");
 			if(typeof Total === "undefined") {
@@ -130,15 +145,9 @@ require(["jquery", "cookie"], function ($, cookie) {
 				var aTotal = Number(Total);
 				total = aTotal + 1;	
 			}
-			
 			// 购物车商品总数量
 			$(".cartcount").empty();
 			$(".cartcount").append(total);
-			
-			
-			
-			
-			
 			// 第一次添加商品			
 			var
 				isAdd = false,  // 假设没有商品，没有添加过
@@ -183,13 +192,12 @@ require(["jquery", "cookie"], function ($, cookie) {
 									</a>
 									<div class="mincart-modify">
 										<span class="minicart-act btn-minus">-</span>
-										<input class="set-num-in" type="text" value="${v.num}" />
+										<input class="set-num-in" type="text" value="${v.num}" readonly/>
 										<span class="minicart-act btn-plus">+</span>
 									</div>
 									<span class="mini-cartlist-delete mincart-delete">删除</span>
 								</li>`);
 			});
-			
 			
 			// 购物车总价格
 			for (var i = 0; i < aGoods.length; i++) {
@@ -201,23 +209,10 @@ require(["jquery", "cookie"], function ($, cookie) {
 			// 小购物车显示商品种类的数量
 			$(".cartnum").empty();
 			$(".cartnum").append(aGoods.length);
-			
-			
-			
-			
 			// 存储cookie
 			cookie.setCookie("goods", JSON.stringify(aGoods), 7);
 			cookie.setCookie("total", total, 7);
 		});
-		
-		
-		
-		
-		
-		
-		
-		
-		
 	});
 });
 
