@@ -5,9 +5,26 @@
 		<title>天天果园-水果网购首选品牌,只为一份极致的新鲜!</title>
 		<link rel="stylesheet" type="text/css" href="css/common.css"/>
 		<link rel="stylesheet" type="text/css" href="css/login-register.css"/>
-		<script src="js/require.js" data-main="js/index"></script>
+		<script src="js/require.js" data-main="js/login-registJS"></script>
 	</head>
 	<body>
+		
+		<!--遮罩层对话框-->	
+		<div id="dialog" class="dialog-open hide">
+			<div class="dialog-zhezhao"></div>
+			<div class="dialog-info" style="width: 360px;margin-left: -180px;">
+				<h5 class="dialog-title">
+					信息提示<span class="close frt"><img src="images/cha.png"/></span>
+				</h5>
+				<div class="dialog-content" style="min-height: 80px;padding-top: 30px;">
+					<p class="clearfix">
+						<span class="dialog-icon"></span>
+						<span class="tips flt">用户名或密码错误</span>
+					</p>
+				</div>
+			</div>
+		</div>
+		
 		
 		<section class="common-header">
 			<div class="topnav">
@@ -185,8 +202,8 @@
 					</span>
 					<ul class="frt topnav-list list-inline">
 						<li>
-							<a href="login.index" class="hover-orange">[ 登陆 ]</a> ，
-							<a href="register.index" class="hover-orange">[ 注册有惊喜 ]</a>
+							<a href="login.html" class="hover-orange">[ 登陆 ]</a> ，
+							<a href="register.html" class="hover-orange">[ 注册有惊喜 ]</a>
 						</li>
 						<li>|</li>
 						<li class="common-topsubnav">
@@ -256,7 +273,7 @@
 			<div class="content">
 				<nav class="navbar">
 					<div class="navbar-logo flt">
-						<a href="http://www.fruitday.com/"><img src="images/logo.svg" /></a>
+						<a href="home.html"><img src="images/logo.svg" /></a>
 					</div>
 				</nav>
 			</div>
@@ -269,7 +286,7 @@
 				<div class="login-left flt">
 					<img src="images/huiyuan.jpg"/>
 					<div class="login">
-						<a href="register.html" target="_blank" class="btn-primary btn-lg active login-btn" title="点击此按钮，登录会员账号">会员注册></a>
+						<a href="register.html" class="btn-primary btn-lg active login-btn" title="点击此按钮，登录会员账号">会员注册></a>
 					</div>
 				</div>
 				<div class="login-right frt">
@@ -325,21 +342,6 @@
 			</div>
 		</div>
 		
-		<!--遮罩层对话框-->	
-		<div id="dialog" class="dialog-open hide">
-			<div class="dialog-zhezhao"></div>
-			<div class="dialog-info" style="width: 360px;margin-left: -180px;">
-				<h5 class="dialog-title">
-					信息提示<span class="close frt"><img src="images/cha.png"/></span>
-				</h5>
-				<div class="dialog-content" style="min-height: 80px;padding-top: 30px;">
-					<p class="clearfix">
-						<span class="dialog-icon"></span>
-						<span class="tips flt">用户名或密码错误</span>
-					</p>
-				</div>
-			</div>
-		</div>
 		
 		
 		

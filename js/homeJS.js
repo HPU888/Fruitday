@@ -1,11 +1,12 @@
 require.config({
 	jquery: "js/jquery",
-	cookie: "js/cookie"
+	cookie: "js/cookie",
+	index: "js/index"
 });
 
-require(["jquery", "cookie"], function ($, cookie) {
-	$(function () {
+require(["jquery", "cookie", "index"], function ($, cookie, index) {
 		
+	$(function (){
 		var total = 0;
 		var totalPrice = 0;
 		// 最开始从后台获取数据
@@ -15,7 +16,7 @@ require(["jquery", "cookie"], function ($, cookie) {
 		var aTotal = typeof sTotal === "undefined" ? [] : Number(sTotal);
 		$(".cartnum").empty();
 		$(".cartnum").append(aCookie.length);
-		//console.log(aTotal);
+		
 		$(".cartcont ul").empty();
 		aCookie.forEach(function (v) {
 		$(".cartcont ul").append(`<li  data-pid="${v.pid}">

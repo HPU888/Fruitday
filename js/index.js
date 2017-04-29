@@ -1,9 +1,8 @@
 require.config({
 	jquery: "js/jquery",
-	cookie: "js/cookie"
 });
 
-require(["jquery", "jquery"], function ($, $) {
+require(["jquery"], function ($) {
 
 	$(function () {
 		// 上海  划过出现城市列表
