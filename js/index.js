@@ -53,6 +53,17 @@ require(["jquery"], function ($) {
 		});
 		
 		
+		// 出现对话框
+		$("#submit").click(function () {
+			$(".dialog-zhezhao").stop(true).fadeToggle(500).toggleClass("hide");
+			$(".dialog-info").stop(true).fadeToggle(1000).toggleClass("hide");
+			$(".tips").html("登陆成功");
+		})
+		
+		
+		
+		
+		
 		
 		
 		
@@ -110,11 +121,13 @@ require(["jquery"], function ($) {
 		
 		
 		// 点击购物框出现遮罩层和购物车
-		$(".s-cart, .cha, .fr-buy").click(function () {
+		$(".s-cart, .cha, .fr-buy, .close").click(function () {
 			$(this).animate({
 				"background-position-y": -291,
 				"background-position-x": -514
 			}, 500);
+			$(".dialog-zhezhao").stop(true).fadeToggle(10).toggleClass("hide");
+			$(".dialog-info").stop(true).fadeToggle(500).toggleClass("hide");
 			$(".zhezhao").stop(true).fadeToggle(1000).toggleClass("hide");
 			$(".shop-cart").stop(true).fadeToggle(500).toggleClass("hide");
 		});

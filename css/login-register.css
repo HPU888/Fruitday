@@ -45,13 +45,11 @@
 	width: 500px;
 	padding-left: 60px;
 }
-.login-right .login-form{
-	margin-top: 75px;
-}
+
 .login-right .login-form ul li{
 	margin-bottom: 26px;
 }
-.login-number .text02{
+.text01, .text02, .text03, .text04, .text05{
 	width: 96px;
     height: 40px;
     font-size: 16px;
@@ -59,51 +57,94 @@
     color: #999;
     text-align: right;
 }
-.login-number .text02 span{
+.text01, .text02, .text03, .text04, .text05 span{
 	line-height: 40px;
 }
-.login-number .number01{
+.login-right .login-form ul li .send-yanzm{
 	position: relative;
 	padding-left: 42px;
 }
-.login-number .number01 #user{
+.login-right .login-form ul li input{
 	width: 300px;
     height: 40px;
     outline: none;
     border-radius: 0;
     font-family: arial;
 }
-.login-form ul li .true{
+.login-right .login-form ul li .send-yanzm .true{
+	right: -36px;
+}
+.login-right .login-form ul li .true{
 	position: absolute;
     top: 10px;
-    right: -36px;
+    right: -65px;
     width: 22px;
     height: 22px;
-    background: url(../images/common/icons.png) no-repeat -12px -360px;
-    display: none;
-}
-.login-pass .text04{
-	width: 96px;
-    height: 40px;
-    font-size: 16px;
-    font-family: 'Hiragino Sans GB','微软雅黑',sans-serif;
-    color: #999;
-    text-align: right;
+    background: url(../images/icons.png) no-repeat -12px -360px;
 }
 .login-pass .text04 span{
 	line-height: 40px;
 }
-.login-pass .password{
+.login-right .login-form ul li .password{
 	position: relative;
 	padding-left: 42px;
 }
-.login-pass .password #passwd{
-	width: 300px;
-    height: 40px;
-    outline: none;
-    border-radius: 0;
-    font-family: arial;
+.login-right .login-form ul li .password .true{
+	right: -36px;
 }
+.login-right .login-form ul li .Apassword{
+	position: relative;
+	padding-left: 42px;
+}
+.login-right .login-form ul li .Apassword .true{
+	right: -36px;
+}
+.login-right .login-form ul li .yanzm{
+	position: relative;
+	padding-left: 42px;
+}
+.login-right .login-form ul li .yanzm input{
+	width: 272px;
+}
+.login-right .login-form ul li .yanzm .yanzm-img{
+	position: absolute;
+	top: 1px;
+	right: 1px;
+}
+.login-right .login-form ul li .yanzm .update{
+	position: absolute;
+    top: 10px;
+    right: -30px;
+    width: 20px;
+    height: 20px;
+    background: url(../images/icons.png) no-repeat -7px -325px;
+    cursor: pointer;
+}
+.login-right .login-form ul li .mobile-yanzm{
+	position: relative;
+	padding-left: 42px;
+}
+.login-right .login-form ul li .mobile-yanzm .true{
+	right: -36px;
+}
+.login-right .login-form ul li .send{
+	position: absolute;
+    top: 1px;
+    right: 1px;
+    width: 98px;
+    height: 38px;
+    font-size: 14px;
+    font-family: 'Hiragino Sans GB','微软雅黑',sans-serif;
+    line-height: 38px;
+    text-align: center;
+    background-color: #eaeaea;
+    cursor: pointer;
+}
+b{
+	font-weight: bold;
+}
+
+
 .form-control{
 	display: block;
     padding: 6px 12px;
@@ -111,7 +152,6 @@
     line-height: 1.42857143;
     color: #555;
     background-color: #fff;
-    background-image: none;
     border: 1px solid #ccc;
     box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
@@ -196,6 +236,229 @@
     color: #7bae55;
     text-decoration: none;
 }
+
+
+
+
+
+/*购物车页面*/
+.common-header .navbar .cart-icon{
+	width: 352px;
+    height: 42px;
+    margin-right: 15px;
+    background: url(../images/icons.png) no-repeat -39px -887px;
+    /*-945px;*/
+}
+.common-header .navbar ul.cart-icon li{
+	margin-top: 7px;
+    font-size: 20px;
+    font-family: "Hiragino Sans GB","微软雅黑",sans-serif;
+    text-align: center;
+}
+.common-header .navbar ul.cart-icon .li1{
+	position: relative;
+    left: -10px;
+}
+.common-header .navbar ul.cart-icon li span{
+	color: #fff;
+}
+.common-header .navbar ul.cart-icon li p{
+	margin-top: 12px;
+	font-size: 12px;
+}
+
+.common-header .navbar .cart-icon .li2{
+	position: relative;
+    left: 80px;
+}
+
+.common-header .navbar .cart-icon .li3{
+	position: relative;
+    left: 165px;
+}
+
+.cart{
+	width: 1000px;
+	margin: 0 auto;
+}
+.cart .cart-bar{
+	padding-top: 50px;
+}
+.cart .cart-bar .mycart{
+	padding-left: 22px;
+	height: 25px;
+	background: url(../images/icons.png) no-repeat -525px -330px;
+}
+.cart .cart-bar .mycart p{
+	font-size: 20px;
+    font-family: "Hiragino Sans GB","微软雅黑",sans-serif;
+    color: #555555;
+    margin-left: 14px;
+    line-height: 27px;
+}
+.cart .cart-bar .mycart a{
+	font-size: 14px;
+    font-family: "Hiragino Sans GB","微软雅黑",sans-serif;
+    color: #64a131;
+    padding-top: 10px;
+}
+.cart .cart-bar .mycart a:hover{
+	text-decoration: underline;
+}
+
+.cart-main{
+	margin-top: 14px;
+}
+.cart-main .cart-head{
+	height: 50px;
+    line-height: 50px;
+    padding-left: 14px;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    color: #999999;
+}
+.cart-main .cart-head .cart-select{
+	width: 63px;
+    height: 50px;
+}
+.cart-main .cart-head .cart-good{
+	margin-left: 200px;
+}
+.cart-main .cart-head .cart-spec{
+	margin-left: 135px;
+}
+.cart-main .cart-head .cart-price{
+	margin-left: 80px;
+}
+.cart-main .cart-head .cart-number{
+	margin-left: 82px;
+}
+.cart-main .cart-head .cart-sum{
+	margin-left: 72px;
+}
+.cart-main .cart-head .cart-action{
+	margin-left: 85px;
+}
+
+.cart-main .cart-order{
+	border: 1px solid #ccc;
+    border-top: none;
+    border-bottom: none;
+}
+.cart-main .cart-order .cart-empty{
+	padding: 50px 0;
+    font-size: 16px;
+    color: #555;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+.cart-main .cart-order .cart-empty>a:hover{
+	text-decoration: underline;
+}
+
+
+/*有商品时购物车样式*/
+.cart-order .cart-box{
+	height: 130px;
+    border-bottom: 1px solid #ccc;
+}
+.cart-order .cart-box div{
+	height: 100%;
+	text-align: center;
+	line-height: 130px;
+	font-size: 14px;
+    font-family: "Hiragino Sans GB","微软雅黑",sans-serif;
+}
+.cart-order .cart-box .cartorder-select{
+	width: 51px;
+    padding: 0 14px;
+}
+.cart-order .cart-box .cart-img{
+	position: relative;
+	width: 110px;
+    height: 110px;
+    margin: 10px 0;
+}
+.cart-order .cart-box .cart-img a img{
+	width: 100%;
+	height: 100%;
+}
+.cart-order .cart-box .cart-name{
+	width: 260px;
+}
+.cart-order .cart-box .cart-name a{
+	display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #555;
+}
+.cart-order .cart-box .spec-num{
+	width: 62px;
+    font-size: 14px;
+    font-family: "Hiragino Sans GB","微软雅黑",sans-serif;
+    color: #555;
+}
+
+.cart-order .cart-box .single-price{
+	width: 168px;
+    text-align: center;
+    font-size: 14px;
+    font-family: "Hiragino Sans GB W6","微软雅黑",sans-serif;
+    color: #64a131;
+    font-weight: bold;
+}
+.cart-order .cart-box .num-set{
+	margin-top: 53px;
+    height: 24px !important;
+    border: 1px solid #dddddd;
+    border-radius: 1px;
+    width: 93px;
+}
+.cart-order .cart-box .num-set span.num{
+	width: 28px;
+    height: 22px;
+    background-color: #eeeeee;
+    color: #a6a6a6;
+    text-align: center;
+    line-height: 22px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.cart-order .cart-box .num-set input{
+	outline: none;
+    font-family: "Hiragino Sans GB","微软雅黑",sans-serif;
+    font-size: 14px;
+    width: 35px;
+    height: 22px;
+    border: 0px;
+    text-align: center;
+    line-height: 24px;
+    padding: 0px;
+    background-color: #fff;
+}
+.cart-order .cart-box .sum{
+	width: 120px;
+    text-align: center;
+    font-size: 14px;
+    font-family: "Hiragino Sans GB","微软雅黑",sans-serif;
+    color: #64a131;
+    font-weight: bold;
+}
+.cart-order .cart-box .delete{
+	width: 130px;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
