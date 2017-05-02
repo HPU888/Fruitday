@@ -74,7 +74,6 @@ require(["jquery"], function ($) {
 		
 		
 		
-		
 		// 删除导航下划线
 		$(".navbar-list ul li a").click(function () {
 			$(".navbar-list ul li em").addClass("hide");
@@ -83,21 +82,29 @@ require(["jquery"], function ($) {
 		
 		
 		// 轮播图
-		var iNum = 0;
+		console.log($(window).innerWidth());
+		var oW  = $(window).innerWidth(),
+			oLi = $(".home-banner-list li"),
+			oUl = $(".home-banner-list"),
+			ulWidth = oW * oLi.length;
+		$(".frame, .home-banner, .home-banner-list li").css("width", oW);
+		oUl.css("width", ulWidth);
+		console.log(oUl.width());
+		/*var iNum = 0;
 		var oTimer = setInterval(function () {
 			iNum ++;
 			$(".home-banner-list").animate({
-				left: -iNum * 1903
+				left: -iNum * liWidth
 			}, 1000);
 			if (iNum > 8) {
 				iNum = 0;
 				$(".home-banner-list").css("left", 0);
 			}
-		}, 2000);
+		}, 2000);*/
 		
 		
 		
-		
+		// 商品下面购物车图标点击添加商品
 		$("#minicart").click(function () {
 			$(".cartbg").css("background", "#f6ab00");
 			if ($(".cartnum").html() != 0) {
@@ -121,7 +128,7 @@ require(["jquery"], function ($) {
 		
 		
 		// 点击购物框出现遮罩层和购物车
-		$(".s-cart, .cha, .fr-buy, .close").click(function () {
+		$(".s-cart, .cha, .fr-buy, .close, .btn-fail").click(function () {
 			$(this).animate({
 				"background-position-y": -291,
 				"background-position-x": -514

@@ -1,41 +1,37 @@
-/*首页banner图*/
+/*首页banner图,轮播图*/
 
 .home-banner{
 	position: relative;
 	width: 100%;
 	height: 400px;
 	margin: 0 auto;
-	overflow: hidden;
 }
 .home-banner .frame{
-	position: relative;
 	width: 100%;
 	height: 100%;
 	margin: 0 auto;
-	overflow: hidden;
 }
 .home-banner .frame .home-banner-list{
 	height: 100%;
-	/*width: 17127px;
-	position: absolute;
-	left: 0;
-	top: 0;*/
+	margin: 0 auto;
 }
 .home-banner .frame .home-banner-list>li{
 	float: left;
-	width: 100%;
 	height: 100%;
+	text-align: center;
 }
 .home-banner .frame .home-banner-list>li>a{
 	position: relative;
-	display: block;
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
-	background-position: center center;
-	background-repeat: no-repeat; 
+    display: block;
+    /*width: 100%;
+    height: 100%;*/
+    overflow: hidden;
+    text-align: center;
 }
-
+.home-banner .frame .home-banner-list>li>a>img{
+	width: 1920px;
+	height: 400px;
+}
 
 /*中部广告*/
 .show-ad{

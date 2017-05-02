@@ -8,7 +8,7 @@
 		<script src="js/require.js" data-main="js/homeJS"></script>
 	</head>
 	<body>
-		
+		<!--                         订单页，结算                      -->
 		<!--遮罩层对话框-->	
 		<div id="dialog" class="dialog-open">
 			<div class="dialog-zhezhao hide"></div>
@@ -274,14 +274,14 @@
 					<div class="navbar-logo flt">
 						<a href="home.html"><img src="images/logo.svg" /></a>
 					</div>
-					<ul class="cart-icon frt">
+					<ul class="cart-icon frt" style="background: url(images/icons.png) no-repeat -39px -945px;">
 						<li class="flt li1">
 							<span>1</span>
 							<p class="color-green">我的购物车</p>
 						</li>
 						<li class="flt li2">
 							<span>2</span>
-							<p>确认订单信息</p>
+							<p class="color-green">确认订单信息</p>
 						</li>
 						<li class="flt li3">
 							<span>3</span>
@@ -291,113 +291,150 @@
 				</nav>
 			</div>
 		</section>
-	
-		<!--购物车内容-->
-		<div class="cart">
-			<div class="cart-bar">
-				<div class="mycart">
-					<p class="flt">我的购物车</p>
-					<a href="home.html" class="frt">继续逛逛></a>
+		
+		<!--订单详情-->
+		<section class="order-info">
+			<div class="order-tit">
+				<h3>填写并核对订单信息</h3>
+			</div>
+			<h4>
+				收货人信息
+				<a href="javascript:;" class="frt newAddress">新增收货地址</a>
+			</h4>
+			<div class="order-address">
+				<ul class="order-addresslist">
+					<li class="cur">
+						<span class="tag">蔡华 广东省</span>
+						<span class="flt">蔡华 13393890087 广东省广州市番禺区大学城广东工业大学</span>
+						<span class="operate">
+							<a href="javascript:;" class="modifyAddress">编辑</a>
+							<a href="javascript:;" class="deleteAddress">删除</a>
+						</span>
+					</li>
+					<li>
+						<span class="tag">蔡华 广东省</span>
+						<span class="flt">蔡华 13393890087 广东省广州市番禺区大学城广东工业大学</span>
+						<span class="operate">
+							<a href="javascript:;" class="modifyAddress">编辑</a>
+							<a href="javascript:;" class="deleteAddress">删除</a>
+						</span>
+					</li>
+				</ul>
+				<div class="address-switch">
+					<span class="more">
+						<b>收起地址</b>
+						<a class="bu"></a>
+					</span>
 				</div>
 			</div>
-			<div class="cart-main clear">
-				<div class="cart-head">
-					<div class="cart-select flt">
-						
-					</div>
-					<div class="cart-good flt">
-						<span>商品</span>
-					</div>
-					<div class="cart-spec flt">
-						<span>规格</span>
-					</div>
-					<div class="cart-price flt">
-						<span>单价(元)</span>
-					</div>
-					<div class="cart-number flt">
-						<span>数量</span>
-					</div>
-					<div class="cart-sum flt">
-						<span>原价(元)</span>
-					</div>
-					<div class="cart-action flt">
-						<span>操作</span>
-					</div>
-				</div>
-				<div class="cart-order">
-					<!--购物车为空时-->
-					<div class="cart-empty">
-						购物车中还没有商品，<a class="color-green" href="home.html">继续逛逛</a>吧！
-					</div>
-					<!--购物车有商品时-->
-					<ul class="list-unstyled clear">
-						<!--<li  data-pid="2222">
-							<div class="cart-box ">
-								<div class="cartorder-select flt"></div>
-								<div class="cart-img flt">
-									<a href="javascript:;">
-										<img class="flt" src="images/1-1270x270-16463-YBUYWUD8.jpg"/>
-									</a>
-								</div>	
-								<div class="cart-name flt">
-									<a href="javascript:;">进口呵呵呵香蕉</a>
-								</div>
-								<div class="spec-num flt">2斤</div>
-								<div class="single-price flt">￥29.90</div>
-								<div class="num-set flt">
-									<span class="num flt btn-minus">-</span>
-									<input class="flt" type="text" name="" value="8" readonly />
-									<span class="num flt btn-plus">+</span>
-								</div>
-								<div class="sum flt">￥89.90</div>
-								<div class="delete cartlist-delete flt">删除</div>
-							</div>
-						</li>
-						<li>
-							<div class="cart-box ">
-								<div class="cartorder-select flt"></div>
-								<div class="cart-img flt">
-									<a href="javascript:;">
-										<img class="flt" src="images/1-1270x270-16463-YBUYWUD8.jpg"/>
-									</a>
-								</div>	
-								<div class="cart-name flt">
-									<a href="javascript:;">进口香蕉</a>
-								</div>
-								<div class="spec-num flt">2斤</div>
-								<div class="single-price flt">￥29.90</div>
-								<div class="num-set flt">
-									<span class="num flt btn-minus">-</span>
-									<input class="flt" type="text" name="" value="8" readonly />
-									<span class="num flt btn-plus">+</span>
-								</div>
-								<div class="sum flt">￥89.90</div>
-								<div class="delete cartlist-delete flt">删除</div>
-							</div>
-						</li>-->
-					</ul>
-					
-				</div>
-				<!--购物车尾部-->
-				<div class="cart-footer hide">
-					<div class="cart-pay frt">
-						<span class="flt">已选择 <em class="pay-count">5件</em> 商品 | 订单金额</span>
-						<span class="total-price flt">￥250.80</span>
-						<a href="settlement.html" id="btngopay" class="go-pay flt">去结算</a>
-					</div>
-				</div>
+			<h4>支付方式</h4>
+			<div class="pay-method">
+				<ul class="pay-methodlist clearfix">
+					<li class="cur">在线支付</li>
+					<li class="sp-pay">
+						线下支付	
+						<ul class="payways clearfix hide">
+							<li class="cur">货到付现金</li>
+							<li>货到刷银行卡</li>
+							<li>红色储值卡支付</li>
+							<li>金色储值卡支付</li>
+							<li>果实卡支付</li>
+							<li>通用券/代金券支付</li>
+						</div>
+					</li>
+				</ul>
 			</div>
-			<div class="look-history">
-				<div class="history-tit">
-					你可能感兴趣的商品
+			<h4>
+				收配送信息
+				<a href="shoppingcart.html" class="frt">修改购物车</a>
+			</h4>
+			<div class="pay-method clearfix">
+				<div class="send-message flt">
+					<h5 class="peisong">
+						<span class="flt">配送时间</span>
+						<p class="flt">无</p>
+						<a href="javascript:;" class="frt">修改</a>
+					</h5>
+					<h5 class="fapiao">
+						<span class="flt">发票信息</span>
+						<p class="flt">无</p>
+						<a href="javascript:;" class="frt">修改</a>
+					</h5>
+					<h5 class="beizhu">
+						<span class="flt">备注信息</span>
+						<textarea rows="3" class="msg frt" placeholder="请填写备注信息"></textarea>
+					</h5>
+					<div class="yunfei" style="color: #999;">
+						运费：<span class="color-green">￥0.00</span>
+					</div>
 				</div>
-				<div class="history-content">
-					
-				</div>
+				<ul class="frt send-cartlist clearfix">
+					<li>
+						<dl class="clearfix">
+							<dt>
+								<img src="images/1-1270x270-2109-6C7A8XA9.jpg"/>
+							</dt>
+							<dd>
+								<div class="protitle">
+									智利咔嚓脆青提
+								</div>
+								<div class="proinfo">
+									￥88.00 / 2斤青提+1斤红提 <span>x 8</span>
+								</div>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl class="clearfix">
+							<dt>
+								<img src="images/1-1270x270-2109-6C7A8XA9.jpg"/>
+							</dt>
+							<dd>
+								<div class="protitle">
+									智利咔嚓脆青提
+								</div>
+								<div class="proinfo">
+									￥88.00 / 2斤青提+1斤红提 <span>x 8</span>
+								</div>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl class="clearfix">
+							<dt>
+								<img src="images/1-1270x270-2109-6C7A8XA9.jpg"/>
+							</dt>
+							<dd>
+								<div class="protitle">
+									智利咔嚓脆青提
+								</div>
+								<div class="proinfo">
+									￥88.00 / 2斤青提+1斤红提 <span>x 8</span>
+								</div>
+							</dd>
+						</dl>
+					</li>
+				</ul>
 			</div>
-		</div>
-	
-	
+			<h4>使用积分/优惠券</h4>
+			<div class="jifen">
+				无
+			</div>
+			<div class="order-all">
+				<p>商品总金额：<span class="total-price">￥1350.00</span></p>
+				<p>运费：<span>￥0.00</span></p>
+				<p>商品减免：<span>￥0</span></p>
+				<p>积分抵扣：<span>￥0.00</span></p>
+				<p>优惠券抵扣：<span>￥0.00</span></p>
+				<p>其他抵扣：<span>￥0.00</span></p>
+			</div>
+			<div class="order-last">
+				<a href="javascript:;" class="frt order-sub">提交订单</a>
+				<span class="total-price frt">￥1350.22</span>
+				<span class="frt">应付金额：</span>
+			</div>
+		</section>
+		
 		<!--右下角图标-->
 		<section class="common-footbar">
 			<a class="kq" href="javascript:;"></a>
@@ -479,5 +516,6 @@
 				</div>
 			</div>
 		</section>
+		
 	</body>
 </html>
