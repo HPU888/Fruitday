@@ -61,17 +61,9 @@ require(["jquery"], function ($) {
 		})
 		
 		
-		
-		
-		
-		
-		
-		
 		$("#cartbtn").click(function () {
 			window.open("shoppingcart.html");
 		})
-		
-		
 		
 		
 		// 删除导航下划线
@@ -82,26 +74,54 @@ require(["jquery"], function ($) {
 		
 		
 		// 轮播图
-		console.log($(window).innerWidth());
+		//console.log($(window).innerWidth());
 		var oW  = $(window).innerWidth(),
 			oLi = $(".home-banner-list li"),
+			aLi = $(".home-banner-btn li"),
 			oUl = $(".home-banner-list"),
+			oTimer = null,
+			iNum = 0,
 			ulWidth = oW * oLi.length;
 		$(".frame, .home-banner, .home-banner-list li").css("width", oW);
 		oUl.css("width", ulWidth);
-		console.log(oUl.width());
-		/*var iNum = 0;
-		var oTimer = setInterval(function () {
+		oTimer = setInterval(function () {
 			iNum ++;
-			$(".home-banner-list").animate({
-				left: -iNum * liWidth
-			}, 1000);
-			if (iNum > 8) {
+			aLi.removeClass("active");
+			aLi.eq(iNum).addClass("active");
+			if (iNum == 9) {
 				iNum = 0;
-				$(".home-banner-list").css("left", 0);
+				aLi.eq(0).addClass("active");
 			}
-		}, 2000);*/
+			$(".home-banner-list").animate({
+				left: -iNum * oW
+			}, 1000);
+		}, 3000);
 		
+		$(".home-banner-list, .home-banner-btn").hover(function () {
+			clearInterval(oTimer);
+		}, function () {
+			oTimer = setInterval(function () {
+				iNum ++;
+				aLi.removeClass("active");
+				aLi.eq(iNum).addClass("active");
+				if (iNum == 9) {
+					iNum = 0;
+					aLi.eq(0).addClass("active");
+				}
+				$(".home-banner-list").animate({
+					left: -iNum * oW
+				}, 1000);
+			}, 3000);
+		});
+		// 点击小圆点切换图片
+		aLi.click(function () {
+			aLi.removeClass("active");
+			$(this).addClass("active");
+			iNum = $(this).index();
+			$(".home-banner-list").animate({
+				left: -iNum * oW
+			}, 1000);
+		});
 		
 		
 		// 商品下面购物车图标点击添加商品
@@ -118,12 +138,6 @@ require(["jquery"], function ($) {
 			}
 			
 		});
-		
-		
-		
-		
-		
-		
 		
 		
 		
@@ -148,7 +162,10 @@ require(["jquery"], function ($) {
 		
 		
 		
-	
+		// 点击右下角top回顶部
+		$(".return-top").click(function () {
+			$(window).scrollTop(0);
+		});
 	
 	
 	

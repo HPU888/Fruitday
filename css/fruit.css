@@ -1,0 +1,152 @@
+
+/*新鲜水果*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*水果详情信息*/
+.typepage{
+	padding-top: 50px;
+}
+.bread{
+	font: 14px/100% 'Hiragino Sans GB','微软雅黑',sans-serif;
+    margin-bottom: 20px;
+}
+#myFocus{
+	position: relative;
+	width: 700px;
+    height: 560px;
+    overflow: hidden;
+}
+#myFocus .xiaotu{
+    width: 140px;
+    height: 560px;
+    padding: 0px;
+    margin-bottom: 0px;
+    margin: 0px;
+}
+#myFocus .xiaotu li{
+	position: relative;
+    width: 138px;
+    height: 138px;
+    margin-bottom: 2px;
+    cursor: pointer;
+}
+#myFocus .xiaotu li.last{
+	margin-bottom: 0;
+}
+#myFocus .xiaotu li img{
+	width: 100%;
+	height: 100%;
+}
+#myFocus .xiaotu li.cur{
+	border: 1px solid #f6af0d;
+}
+
+#myFocus .datu{
+	position: relative;
+	width: 560px;
+    height: 560px;
+    padding: 0px;
+    margin-bottom: 0px;
+    margin: 0px;
+}
+#myFocus .datu li{
+	position: absolute;
+	display: none;
+	left: 0;
+	top: 0;
+}
+#myFocus .datu li.cur{
+	display: block;
+}
+#myFocus .datu li a{
+	display: block;
+    width: 560px;
+    height: 560px;
+}
+#myFocus .datu li img{
+	width: 560px;
+    height: 560px;
+}
+#myFocus .datu .s-discount{
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+#myFocus .datu .s-discount>span{
+	display: inline-block;
+	font-family: "微软雅黑";
+	font-size: 14px;
+    line-height: 1;
+    padding: 6px 5px;
+    color: #fff;
+    margin-right: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

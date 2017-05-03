@@ -62,6 +62,27 @@ require(["jquery", "cookie", "index"], function ($, cookie, index) {
 							</li>`);
 		});
 		
+		// 确认订单信息页面
+		$(".send-cartlist").empty();
+		aCookie.forEach(function (v) {
+			$(".send-cartlist").append(`<li>
+						<dl class="clearfix">
+							<dt>
+								<img src="${v.src}"/>
+							</dt>
+							<dd>
+								<div class="protitle">
+									${v.name}
+								</div>
+								<div class="proinfo">
+									￥${v.price} / ${v.unit} <span>x ${v.num}</span>
+								</div>
+							</dd>
+						</dl>
+					</li>`);
+		});
+		
+		
 		
 		// 加减号改变商品
 		$(".btn-minus").click(function () {

@@ -81,9 +81,9 @@ h5{
 .select{
 	background: #fff;
 }
-.active{
-	
-}
+/*.active{
+	background: #64a131;
+}*/
 
 
 .clear{
@@ -326,6 +326,10 @@ h5{
 }
 
 /*导航部分*/
+.common-header{
+	box-shadow: 0 2px 8px rgba(230,230,230,0.75);
+    border-bottom: 1px solid #f1f1f1;
+}
 .common-header>.content{
 	height: 120px;
 	padding: 20px 0;
@@ -404,6 +408,7 @@ h5{
     padding: 2px 6px;
     background: none;
     border: none;
+    outline: none;
     cursor: pointer;
 }
 .navbar .navbar-right .common-topsearch>button .iconfont{
