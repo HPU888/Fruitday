@@ -9,18 +9,33 @@
 	</head>
 	<body>
 		
-		<!--遮罩层对话框-->	
-		<div id="dialog" class="dialog-open hide">
-			<div class="dialog-zhezhao"></div>
-			<div class="dialog-info" style="width: 360px;margin-left: -180px;">
-				<h5 class="dialog-title">
-					信息提示<span class="close frt"><img src="images/cha.png"/></span>
-				</h5>
-				<div class="dialog-content" style="min-height: 80px;padding-top: 30px;">
-					<p class="clearfix">
-						<span class="dialog-icon"></span>
-						<span class="tips flt">请先登录</span>
-					</p>
+		<!--购物车弹出层-->	
+		<div class="zhezhao hide"></div>
+		<!--购物车-->
+		<div class="shop-cart hide">
+			<div class="shopcart-top">
+				<div class="cha frt">
+					<img src="images/cha.png"/>
+				</div>
+			</div>
+			<div class="shopcart-content select">
+				<div class="cart-title">
+					<div class="suc flt"></div>
+					<div class="adds flt">
+						<p>加入购物车成功</p>
+					</div>
+				</div>
+				<p class="row2">
+					购物车中共 <em class="cartcount">6</em> 件商品 | 商品小计 <em class="cartprice">￥250.00</em>
+					
+				</p>
+				<div class="buy">
+					<div class="fr-buy flt">
+						<a href="javascript:;" title="点击此按钮，到下一步确认购买信息">继续购物</a>
+					</div>
+					<div class="fr-add flt">
+						<a href="shoppingcart.html" title="加入购物车">去结算</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -468,7 +483,7 @@
 						<h5 class="flt">数量</h5>
 						<div class="goods-buy flt clearfix">
 							<span class="redu num flt">-</span>
-							<input type="text" class="flt" value="1" readonly/>
+							<input type="text" class="flt sp-input" value="1" readonly/>
 							<span class="add num flt">+</span>
 						</div>
 					</div>
@@ -477,7 +492,7 @@
 							<a href="settlement.html" class="btn" title="点击此按钮，到下一步确认购买信息">立即购买</a>
 						</div>
 						<div class="fr-add flt">
-							<a href="javascript:;" class="btn" title="加入购物车">加入购物车</a>
+							<a href="javascript:;" class="btn" title="加入购物车"  data-pid="232323" data-name="新奇士美国晚熟脐橙" data-price="68.00" data-unit="12个" data-src="images/f-370x370-2172-FCT8DTT5.jpg">加入购物车</a>
 						</div>
 					</div>
 				</div>
@@ -526,7 +541,7 @@
 									<h5>新奇士美国晚熟脐橙</h5>
 									<p>￥68.00 / 12个</p>
 									<p>X1</p>
-									<div class="anniu">确认</div>
+									<div class="anniu" data-pid="232323" data-name="新奇士美国晚熟脐橙" data-price="68.00" data-unit="12个" data-src="images/f-370x370-2172-FCT8DTT5.jpg">确认</div>
 								</div>
 							</div>
 						</a>

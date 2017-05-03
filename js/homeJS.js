@@ -226,7 +226,6 @@ require(["jquery", "cookie", "index"], function ($, cookie, index) {
 		}
 		
 		
-		
 		for (var j = 0; j < aCookie.length; j++) {
 			totalPrice += aCookie[j].price * aCookie[j].num;
 			total += aCookie[j].num;
@@ -249,7 +248,7 @@ require(["jquery", "cookie", "index"], function ($, cookie, index) {
 		
 
 		// 点击购物车添加商品
-		$(".s-cart").click(function () {
+		$(".s-cart, .anniu").click(function () {
 			$(".cartcont").slideUp(50);
 			
 			var total = 0;
@@ -330,6 +329,91 @@ require(["jquery", "cookie", "index"], function ($, cookie, index) {
 			cookie.setCookie("goods", JSON.stringify(aGoods), 7);
 			cookie.setCookie("total", total, 7);
 		});
+		
+		// 点击详情页添加商品（第一个按钮）
+		$(".fr-add a").click(function () {
+			$(".cartcont").slideUp(50);
+			var iN = parseInt($(".sp-input").val());
+			console.log(iN);
+			var total = 0;
+			var totalPrice = 0;
+			// 购物总数量
+			var Total = cookie.getCookie("total");
+			if(typeof Total === "undefined") {
+				total = iN;
+			} else {
+				var aTotal = Number(Total);
+				total = aTotal + iN;	
+			}
+			// 购物车商品总数量
+			$(".cartcount").empty();
+			$(".cartcount").append(total);
+			// 第一次添加商品			
+			var
+				isAdd = false,  // 假设没有商品，没有添加过
+				sGoods = cookie.getCookie("goods");
+				
+			if(typeof sGoods === "undefined") {
+				var aGoods = []; // 相当于购物的车子
+			} else {
+				var aGoods = JSON.parse(sGoods);
+
+				// 判断当前商品有没有添加过
+				for(var i = 0; i < aGoods.length; i++) {
+					if(aGoods[i].pid == $(this).data("pid")) {
+						aGoods[i].num += iN;
+						isAdd = true;
+						break;
+					}
+				}
+			}
+			// 如果isAdd为false,说明商品没有添加过
+			if(!isAdd) {
+				var oGoods = {
+					pid:   $(this).data("pid"),
+					name:  $(this).data("name"),
+					price: $(this).data("price"),
+					src:   $(this).data("src"),
+					unit:  $(this).data("unit"),
+					num:   iN,
+				};
+				aGoods.push(oGoods);
+			}
+			// 显示购物车中商品列表
+			$(".cartcont ul").empty();
+			aGoods.forEach(function (v) {
+			$(".cartcont ul").append(`<li>
+									<a href="javascript:;">
+										<img src="${v.src}"/ class="flt">
+										<div class="minicart-info">
+											<h5>${v.name}</h5>
+											<h5>￥${v.price}/${v.unit}</h5>
+										</div>
+									</a>
+									<div class="mincart-modify">
+										<span class="minicart-act btn-minus">-</span>
+										<input class="set-num-in" type="text" value="${v.num}" readonly/>
+										<span class="minicart-act btn-plus">+</span>
+									</div>
+									<span class="mini-cartlist-delete mincart-delete">删除</span>
+								</li>`);
+			});
+			
+			// 购物车总价格
+			for (var i = 0; i < aGoods.length; i++) {
+				totalPrice += aGoods[i].price * aGoods[i].num;
+			}
+			$(".cartprice, .cartprice1").empty();
+			$(".cartprice").append("￥" + totalPrice.toFixed(2));
+			$(".cartprice1").append(totalPrice.toFixed(2));
+			// 小购物车显示商品种类的数量
+			$(".cartnum").empty();
+			$(".cartnum").append(aGoods.length);
+			// 存储cookie
+			cookie.setCookie("goods", JSON.stringify(aGoods), 7);
+			cookie.setCookie("total", total, 7);
+		});
+		
 	});
 });
 

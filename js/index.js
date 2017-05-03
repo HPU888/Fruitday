@@ -128,7 +128,9 @@ require(["jquery"], function ($) {
 		
 		// 商品下面购物车图标点击添加商品
 		$("#minicart").click(function () {
-			$(".cartbg").css("background", "#f6ab00");
+			console.log($(this).children().eq(1));
+			$(this).children().eq(0).toggleClass("cartbg");
+			$(this).children().eq(0).toggleClass("bg-orange");
 			if ($(".cartnum").html() != 0) {
 				$(".cartcont").slideToggle(300);
 				$(".minicart-pay").removeClass("hide");
@@ -144,7 +146,7 @@ require(["jquery"], function ($) {
 		
 		
 		// 点击购物框出现遮罩层和购物车
-		$(".s-cart, .cha, .fr-buy, .close, .btn-fail").click(function () {
+		$(".s-cart, .cha, .fr-buy, .close, .btn-fail, .fr-add a, .anniu").click(function () {
 			$(this).animate({
 				"background-position-y": -291,
 				"background-position-x": -514
@@ -204,6 +206,19 @@ require(["jquery"], function ($) {
 			$(".thefruit").toggleClass("hide");
 		})
 		
+		// 详情页加减号
+		$(".add").click(function () {
+			var prinum = $(this).prev().val();
+			 prinum ++;
+			$(this).prev().val(prinum);
+		});
+		$(".redu").click(function () {
+			var prinum = $(this).next().val();
+			if (parseInt($(this).next().val()) > 1) {
+				prinum --;
+				$(this).next().val(prinum);
+			}
+		});
 		
 		
 		
