@@ -85,7 +85,14 @@ h5{
 	background: #64a131;
 }*/
 
-
+#clean:after{
+	clear: both;
+	content: "";
+	height: 0;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+}
 .clear{
 	clear: both;
 }

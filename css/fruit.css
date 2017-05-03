@@ -50,6 +50,14 @@
 #myFocus .xiaotu li.last{
 	margin-bottom: 0;
 }
+#myFocus .xiaotu li span{
+	position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+}
 #myFocus .xiaotu li img{
 	width: 100%;
 	height: 100%;
@@ -98,6 +106,414 @@
     color: #fff;
     margin-right: 1px;
 }
+.product-info{
+	padding-left: 28px;
+    width: 580px;
+    padding-top: 20px;
+}
+.product-info .country{
+	width: 532px;
+}
+.product-info .country .guoqi{
+	margin-right: 12px;
+    margin-top: 5px;
+    width: 44px;
+    height: 30px;
+    background: url(../images/icons.png) no-repeat -449px -255px;
+}
+.product-info .country .name{
+	width: 470px;
+}
+.product-info .country .name h3{
+	margin: 0;
+	font-family: 'Hiragino Sans GB','微软雅黑',sans-serif;
+    color: #555555;
+    font-size: 24px;
+    line-height: 40px;
+    width: 100%;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.product-info .country .name>p{
+	height: 48px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 16px;
+    line-height: 48px;
+    color: #999;
+    margin: 0;
+}
+.product-info .price-info{
+	position: relative;
+	border-bottom: 1px solid #dddddd;
+}
+.product-info .price-info .price01{
+	position: relative;
+    width: 552px;
+    height: 75px;
+    padding-left: 10px;
+    background: url(../images/icons.png) no-repeat 0 -48px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+.product-info .price-info .price01 .price01-box1{
+	position: absolute;
+    top: 25px;
+}
+.product-info .price-info h5{
+	font: 14px/200% 'Hiragino Sans GB','微软雅黑',sans-serif;
+    color: #999999;
+    width: 60px;
+    margin: 0px;
+}
+.product-info .price-info .price01 .price01-box1 span{
+	font: 14px/200%'Hiragino Sans GB','微软雅黑',sans-serif;
+    color: #999999;
+    width: 68px;
+    margin: 0px;
+    padding-bottom: 10px;
+}
+.product-info .price-info .price01 .price01-box1 span.price01-sp{
+	width: 124px;
+    font: 24px/100% "Hiragino Sans GB","微软雅黑",sans-serif;
+    color: #64a131;
+    font-weight: bold;
+}
+.product-info .price-info .price01 .price01-box2{
+	position: relative;
+    width: 56px;
+    height: 26px;
+    margin-top: 25px;
+    background: url(../images/icons.png) no-repeat -64px -8px;
+}
+.product-info .price-info .price01 .price01-box2 .weixin{
+	position: absolute;
+    top: -150px;
+    right: 25px;
+    z-index: 9999;
+}
+.product-info .price-info .guige{
+	margin-bottom: 22px;
+    padding-left: 10px;
+}
+.product-info .price-info .guige .zhuang span.current{
+	display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 26px;
+    margin-right: 10px;
+    text-align: center;
+    font-family: "Hiragino Sans GB","微软雅黑";
+    font-size: 12px;
+    line-height: 26px;
+    background-color: #64a131;
+    color: #ffffff;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+.product-info .price-info .send{
+	position: relative;
+    z-index: 10;
+    margin-bottom: 21px;
+    padding-left: 10px;
+}
+.product-info .price-info .send .btn-group{
+	height: 35px;
+	position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+.product-info .price-info .send .btn-group .btn-default{
+    color: #333;
+    background-color: #fff;
+    border-color: #ddd;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+.product-info .price-info .send span.have{
+	color: #64a131;
+    width: 200px;
+    padding-top: 7px;
+    padding-left: 10px;
+}
+.product-info .price-info .number{
+	position: relative;
+    margin-bottom: 30px;
+    padding-left: 10px;
+    z-index: 1;
+}
+.product-info .price-info .number .goods-buy{
+	height: 24px;
+    border: 1px solid #dddddd;
+    border-radius: 1px;
+}
+.product-info .price-info .number .goods-buy span.num{
+	width: 28px;
+    height: 22px;
+    background-color: #eeeeee;
+    color: #a6a6a6;
+    text-align: center;
+    line-height: 22px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.product-info .price-info .number .goods-buy input{
+	font-family: "Hiragino Sans GB","微软雅黑",sans-serif;
+    font-size: 14px;
+    width: 35px;
+    height: 22px;
+    border: 0px;
+    text-align: center;
+    line-height: 24px;
+    padding: 0px;
+    outline: none;
+}
+.product-info .price-info .buy{
+	margin-bottom: 23px;
+}
+.product-info .price-info .buy .fr-buy{
+	margin-right: 10px;
+	margin-left: 70px;
+}
+.product-info .price-info .buy .fr-buy a{
+	color: #7daf57;
+    background: #f5ffed;
+    border: 1px solid #64a131;
+}
+.product-info .price-info .buy a{
+	display: block;
+    width: 160px;
+    height: 36px;
+    font-family: "Hiragino Sans GB","微软雅黑",sans-serif;
+    font-size: 16px;
+    text-align: center;
+    line-height: 18px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+.product-info .price-info .buy .fr-add a{
+	color: #eff4ec;
+    background: #64a131;
+}
+.product-info .comment{
+	margin-top: 26px;
+}
+.product-info .comment>div{
+	width: 50%;
+    margin-bottom: 10px;
+}
+.product-info .comment h5{
+	font-size: 14px;
+    line-height: 20px;
+    margin: 0px;
+    margin-right: 20px;
+    color: #999;
+}
+.product-info .comment>div>span{
+	width: 70%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #555;
+}
+.product-info .comment>div>span img{
+	height: 15px;
+}
+
+.kong{
+	height: 68px;
+	clear: both;
+}
+/*商品简介*/
+.access .leftpart{
+	width: 1002px;
+    border: 1px solid #ccc;
+}
+.access .good-detail{
+	width: 1000px;
+    background: #f1f1f1;
+    border-left: none;
+    border-right: none;
+}
+.access .good-detail span{
+	font: 16px/200% 'Hiragino Sans GB','微软雅黑',sans-serif;
+    color: #555555;
+    height: 39px;
+    padding: 0 38px;
+    text-align: center;
+    line-height: 39px;
+    cursor: pointer;
+    border-right: 1px solid #ccc;
+    margin-top: -1px;
+}
+.access .good-detail span b{
+	color: #64A131;
+	font-weight: bold;
+}
+.access .good-detail span.cur{
+	height: 39px;
+    border-top: 3px solid #64a131;
+    padding: 0 36px;
+    background-color: #ffffff;
+    text-align: center;
+    line-height: 36px;
+}
+.access .good-detail .btn{
+	display: block;
+    position: relative;
+    width: 172px;
+    height: 38px;
+    color: #fff;
+    font-family: "Hiragino Sans GB","微软雅黑",sans-serif;
+    font-size: 16px;
+    text-align: center;
+    line-height: 38px;
+    background: #64a131;
+    padding: 2px 22px;
+}
+.access .good-detail .btn i{
+	display: block;
+    width: 20px;
+    height: 20px;
+    margin-top: 7px;
+    margin-left: 10px;
+    background: url(../images/icons.png) no-repeat -528px -5px;
+}
+.access .good-detail .btn .thefruit{
+    position: absolute;
+    right: 0px;
+    bottom: -168px;
+    width: 358px;
+    padding: 14px;
+    height: 168px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-right: none;
+}
+.access .good-detail .btn .thefruit .fruit-left>img{
+	width: 140px;
+    height: 140px;
+    overflow: hidden;
+}
+.access .good-detail .btn .thefruit .fruit-right{
+	width: 175px;
+    padding-left: 14px;
+}
+.access .good-detail .btn .thefruit .fruit-right>h5{
+	text-align: left;
+    line-height: 20px;
+    color: #555555;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.access .good-detail .btn .thefruit .fruit-right>p{
+	text-align: left;
+    font-size: 14px;
+    line-height: 31px;
+    color: #999999;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.access .good-detail .btn .thefruit .fruit-right .anniu{
+	width: 90px;
+    height: 30px;
+    background-color: #64a131;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Hiragino Sans GB','微软雅黑',sans-serif;
+    line-height: 30px;
+    margin-top: 20px;
+}
+
+.good-comment{
+	width: 1000px;
+}
+.good-comment ul{
+	margin: 0;
+}
+.good-comment ul.no1 li{
+	width: 1000px;
+    height: auto;
+}
+.good-comment ul.no1 li img{
+	width: 100%;
+}
+.app-detail .pro-table{
+	font-family: Calibri,Arial,Helvetica,sans-serif;
+    border: 1px solid #d8d8d8;
+}
+.app-detail .pro-table dl:nth-child(odd){
+	background: #f7f7f7;
+}
+.app-detail .pro-table dl{
+	overflow: hidden;
+	border-bottom: 1px solid #d8d8d8;
+    margin: 0;
+    font-size: 14px;
+    line-height: 17px;
+    width: 100%;
+    font-weight: lighter;
+}
+.app-detail .pro-table dl dt{
+	float: left;
+	width: 86px;
+    text-align: left;
+    padding: 9px 12px;
+    font-weight: bold;
+}
+.app-detail .pro-table dl dd{
+	float: left;
+	margin: 0;
+    border-left: 1px solid #d8d8d8;
+    padding: 9px 12px;
+}
+
+.access .rightpart{
+	width: 278px;
+    padding-left: 20px;
+}
+.access .rightpart>h5{
+	color: #64a131;
+    font-family: 'Hiragino Sans GB','微软雅黑',sans-serif;
+    line-height: 39px;
+    border-bottom: 1px solid #ccc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

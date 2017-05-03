@@ -80,7 +80,9 @@ require(["jquery"], function ($) {
 			aLi = $(".home-banner-btn li"),
 			oUl = $(".home-banner-list"),
 			oTimer = null,
+			oTimer1 = null,
 			iNum = 0,
+			iNum1 = 0,
 			ulWidth = oW * oLi.length;
 		$(".frame, .home-banner, .home-banner-list li").css("width", oW);
 		oUl.css("width", ulWidth);
@@ -159,6 +161,58 @@ require(["jquery"], function ($) {
 				"background-position-x": -517
 			}, 500);
 		});
+		
+		
+		// 水果详情页面
+		// 图片轮播
+		$(".xiaotu li, .datu li").hover(function (){
+			clearInterval(oTimer1);
+			$(".datu li, .xiaotu li").removeClass("cur");
+			$(this).siblings().children("span").addClass("hide");
+			$(this).addClass("cur").children("span").removeClass("hide");
+			$(".datu li").eq($(this).index()).addClass("cur");
+		}, function () {
+			iNum1 = $(this).index();
+			oTimer1 = setInterval(function() {
+				iNum1 ++;
+				if (iNum1 == 3) {
+					iNum1 = 0;
+				}
+				$(".datu li, .xiaotu li").removeClass("cur");
+				$(".xiaotu li span").addClass("hide");
+				$(".xiaotu li").eq(iNum1).addClass("cur").children("span").removeClass("hide");
+				$(".datu li").eq(iNum1).addClass("cur");
+			}, 3000);
+		});
+		oTimer1 = setInterval(function() {
+			iNum1 ++;
+			if (iNum1 == 3) {
+				iNum1 = 0;
+			}
+			$(".datu li, .xiaotu li").removeClass("cur");
+			$(".xiaotu li span").addClass("hide");
+			$(".xiaotu li").eq(iNum1).addClass("cur").children("span").removeClass("hide");
+			$(".datu li").eq(iNum1).addClass("cur");
+		}, 3000);
+		
+		// 微信
+		$(".price01-box2").hover(function () {
+			$(".weixin").toggleClass("hide");
+		})
+		
+		$(".good-detail a").click(function () {
+			$(".thefruit").toggleClass("hide");
+		})
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
