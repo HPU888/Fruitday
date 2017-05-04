@@ -331,7 +331,7 @@ require(["jquery", "cookie", "index"], function ($, cookie, index) {
 		});
 		
 		// 点击详情页添加商品（第一个按钮）
-		$(".fr-add a").click(function () {
+		$(".fr-adding a").click(function () {
 			$(".cartcont").slideUp(50);
 			var iN = parseInt($(".sp-input").val());
 			console.log(iN);

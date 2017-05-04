@@ -9,6 +9,25 @@
 	</head>
 	<body>
 		
+		<!--遮罩层对话框-->	
+		<div id="dialog" class="dialog-open hide">
+			<div class="dialog-zhezhao"></div>
+			<div class="dialog-info" style="width: 360px;margin-left: -180px;">
+				<h5 class="dialog-title">
+					信息提示<span class="close frt"><img src="images/cha.png"/></span>
+				</h5>
+				<div class="dialog-content" style="min-height: 80px;padding-top: 30px;">
+					<p class="clearfix">
+						<span class="dialog-icon"></span>
+						<span class="tips flt">请先登录</span>
+					</p>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		
 		<!--购物车弹出层-->	
 		<div class="zhezhao hide"></div>
 		<!--购物车-->
@@ -491,7 +510,7 @@
 						<div class="fr-buy flt">
 							<a href="settlement.html" class="btn" title="点击此按钮，到下一步确认购买信息">立即购买</a>
 						</div>
-						<div class="fr-add flt">
+						<div class="fr-adding flt">
 							<a href="javascript:;" class="btn" title="加入购物车"  data-pid="232323" data-name="新奇士美国晚熟脐橙" data-price="68.00" data-unit="12个" data-src="images/f-370x370-2172-FCT8DTT5.jpg">加入购物车</a>
 						</div>
 					</div>

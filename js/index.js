@@ -128,7 +128,6 @@ require(["jquery"], function ($) {
 		
 		// 商品下面购物车图标点击添加商品
 		$("#minicart").click(function () {
-			console.log($(this).children().eq(1));
 			$(this).children().eq(0).toggleClass("cartbg");
 			$(this).children().eq(0).toggleClass("bg-orange");
 			if ($(".cartnum").html() != 0) {
