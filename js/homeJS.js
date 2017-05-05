@@ -334,7 +334,7 @@ require(["jquery", "cookie", "index"], function ($, cookie, index) {
 		$(".fr-adding a").click(function () {
 			$(".cartcont").slideUp(50);
 			var iN = parseInt($(".sp-input").val());
-			console.log(iN);
+			//console.log(iN);
 			var total = 0;
 			var totalPrice = 0;
 			// 购物总数量

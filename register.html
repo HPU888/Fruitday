@@ -6,13 +6,14 @@
 		<link rel="stylesheet" type="text/css" href="css/common.css"/>
 		<link rel="stylesheet" type="text/css" href="css/login-register.css"/>
 		<script src="js/require.js" data-main="js/login-registJS"></script>
+		<script src="js/gVerify.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
 		
 		<!--遮罩层对话框-->	
-		<div id="dialog" class="dialog-open hide">
-			<div class="dialog-zhezhao"></div>
-			<div class="dialog-info" style="width: 360px;margin-left: -180px;">
+		<div id="dialog" class="dialog-open">
+			<div class="dialog-zhezhao hide"></div>
+			<div class="dialog-info hide" style="width: 360px;margin-left: -180px;">
 				<h5 class="dialog-title">
 					信息提示<span class="close frt"><img src="images/cha.png"/></span>
 				</h5>
@@ -281,7 +282,7 @@
 		<!--注册会员-->
 		<div class="vip-login">
 			<p class="member">注册会员</p>
-			<div class="login-info clearfix">
+			<div class="login-info" id="clean">
 				<div class="login-left flt">
 					<img src="images/huiyuan.jpg"/>
 					<div class="login">
@@ -291,63 +292,63 @@
 				<div class="login-right frt">
 					<div class="login-form">
 						<ul>
-							<li class="clearfix">
+							<li id="clean">
 								<div class="text02 flt">
 									<span class="mobile">手机号</span>
 								</div>
 								<div class="send-yanzm flt">
 									<input type="text" id="user" class="form-control" />
-									<span class="true iconError"></span>
+									<span class="hide true"></span>
 								</div>
 							</li>
-							<li class="clearfix">
+							<li id="clean">
 								<div class="text04 flt">
 									<span class="code">密码</span>
 								</div>
 								<div class="password flt">
 									<input type="password" id="passwd"  class="form-control" placeholder="请输入6-20位号码字符" />
-									<span class="true"></span>
+									<span class="hide true"></span>
 								</div>
 							</li>
-							<li class="clearfix">
+							<li id="clean">
 								<div class="text05 flt">
 									<span class="code">确认密码</span>
 								</div>
 								<div class="Apassword flt">
 									<input type="password" id="Apasswd"  class="form-control" placeholder="请输入6-20位号码字符" />
-									<span class="true"></span>
+									<span class="hide true"></span>
 								</div>
 							</li>
-							<li class="clearfix">
+							<li id="clean">
 								<div class="text01 flt">
 									<span class="form1">验证码</span>
 								</div>
 								<div class="yanzm flt">
 									<input type="text" id="verify"  class="flt form-control" />
-									<span class="true"></span>
-									<span class="yanzm-img">
-										<img class="auth-img" src="images/register.jpg"/>
+									<span class="hide true"></span>
+									<span class="yanzm-img" id="yanzmimg">
+										<!--<img class="auth-img" src="images/register.jpg"/>-->
 									</span>
 									<span class="update auth-img"></span>
 								</div>
 							</li>
-							<li class="clearfix">
+							<li id="clean">
 								<div class="text03 flt">
 									<span class="text">手机验证码</span>
 								</div>
 								<div class="mobile-yanzm flt">
 									<input type="text" id="telverify"  class="hasError form-control" />
-									<span class="true"></span>
+									<span class="hide true"></span>
 									<div class="send" id="getcode">
 										<span>发送验证码</span>
+										<span class="hide">还剩<b id="timeout">59</b>秒</span>
 									</div>
-									<span class="hide">还剩<b id="timeout">60</b>秒</span>
 								</div>
 							</li>
-							<li class="clearfix">
+							<li id="clean">
 								<div class="fruit-login frt">
 									<div class="fr-regist flt">
-										<a href="javascript:;" id="submit">注册</a>
+										<a href="javascript:;" id="submit-reg">注册</a>
 									</div>
 									<div class="fr-login flt">
 										<a href="login.html">会员登录</a>

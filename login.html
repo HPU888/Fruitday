@@ -5,7 +5,7 @@
 		<title>天天果园-水果网购首选品牌,只为一份极致的新鲜!</title>
 		<link rel="stylesheet" type="text/css" href="css/common.css"/>
 		<link rel="stylesheet" type="text/css" href="css/login-register.css"/>
-		<script src="js/require.js" data-main="js/login-registJS"></script>
+		<script src="js/require.js" data-main="js/homeJS"></script>
 	</head>
 	<body>
 		
@@ -19,7 +19,7 @@
 				<div class="dialog-content" style="min-height: 80px;padding-top: 30px;">
 					<p class="clearfix">
 						<span class="dialog-icon"></span>
-						<span class="tips flt">用户名或密码错误</span>
+						<span class="tips flt">0</span>
 					</p>
 				</div>
 			</div>
@@ -282,7 +282,7 @@
 		<!--会员登录-->
 		<div class="vip-login">
 			<p class="member">会员登录</p>
-			<div class="login-info clearfix">
+			<div class="login-info" id="clean">
 				<div class="login-left flt">
 					<img src="images/huiyuan.jpg"/>
 					<div class="login">
@@ -292,25 +292,25 @@
 				<div class="login-right frt">
 					<div class="login-form" style="margin-top: 75px;">
 						<ul>
-							<li class="login-number clearfix">
+							<li class="login-number" id="clean">
 								<div class="text02 flt">
 									<span class="mobile">手机号</span>
 								</div>
 								<div class="send-yanzm flt">
 									<input type="text" id="user" class="form-control" />
-									<span class="true"></span>
+									<span class="hide true"></span>
 								</div>
 							</li>
-							<li class="login-pass clearfix">
+							<li class="login-pass" id="clean">
 								<div class="text04 flt">
 									<span class="code">密码</span>
 								</div>
 								<div class="password flt">
 									<input type="password" id="passwd"  class="form-control" placeholder="请输入6-20位号码字符" />
-									<span class="true"></span>
+									<span class="hide true"></span>
 								</div>
 							</li>
-							<li class="login-forget clearfix">
+							<li class="login-forget" id="clean">
 								<div class="wj-mima frt clearfix">
 									<div class="fr-jz flt">
 										<div class="checkbox">
@@ -329,7 +329,7 @@
 							<li class="clearfix">
 								<div class="fruit-login frt">
 									<div class="fr-regist flt">
-										<a href="javascript:;" id="submit">登陆</a>
+										<a href="javascript:;" id="submit-log">登陆</a>
 									</div>
 									<div class="fr-login flt">
 										<a href="register.html">注册会员</a>

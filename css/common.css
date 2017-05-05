@@ -901,7 +901,7 @@ h5{
 	margin-left: 70px;
 	margin-right: 11px;
 }
-.fr-buy a,.fr-add a{
+.shop-cart .shopcart-content .buy .fr-buy a,.shop-cart .shopcart-content .buy .fr-add a{
 	display: block;
     width: 147px;
     height: 40px;

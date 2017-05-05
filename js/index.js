@@ -54,16 +54,16 @@ require(["jquery"], function ($) {
 		
 		
 		// 出现对话框
-		$("#submit").click(function () {
+		$(".newAddress").click(function () {
 			$(".dialog-zhezhao").stop(true).fadeToggle(500).toggleClass("hide");
 			$(".dialog-info").stop(true).fadeToggle(1000).toggleClass("hide");
 			$(".tips").html("登陆成功");
-		})
+		});
 		
 		
 		$("#cartbtn").click(function () {
 			window.open("shoppingcart.html");
-		})
+		});
 		
 		
 		// 删除导航下划线
@@ -145,7 +145,7 @@ require(["jquery"], function ($) {
 		
 		
 		// 点击购物框出现遮罩层和购物车
-		$(".s-cart, .cha, .fr-buy, .close, .btn-fail, .fr-add a, .anniu").click(function () {
+		$(".s-cart, .cha, .fr-buy, .close, .btn-fail, .fr-add a, .anniu, .fr-adding a").click(function () {
 			$(this).animate({
 				"background-position-y": -291,
 				"background-position-x": -514
@@ -219,14 +219,73 @@ require(["jquery"], function ($) {
 			}
 		});
 		
+		/*
+		 *  鲜果页
+		 */
+		//a点击
+		$(".rightpart a").click(function () {
+			$(this).parent().children().removeClass("active");
+			$(this).addClass("active");
+			$(this).parent().prev().children().removeClass("active");
+		});
+		$(".leftpart a").click(function () {
+			$(this).parent().next().children().removeClass("active");
+			$(this).addClass("active");
+		});
 		
+		// 确认订单信息页面
+		// 收起地址
+		$(".more").click(function () {
+			$(".order-addresslist").slideToggle(500);
+		});
 		
+		// 付款方式
+		$(".pay-methodlist li").click(function (e) {
+			e.stopPropagation();
+		});
+		$(".pay-methodlist li").click(function () {
+			$(".pay-methodlist li").removeClass("cur");
+			$(this).addClass("cur");
+		});
+		$(".pay-methodlist li").eq(0).click(function (){
+			$(".payways").addClass("hide");
+		});
+		$(".sp-pay").click(function (){
+			$(".payways").toggleClass("hide");
+		});
+		$(".payways li").click(function () {
+			$(".sp-pay").addClass("cur");
+			$(".payways li").removeClass("cur");
+			$(".payways").addClass("hide");
+			$(this).addClass("cur");
+			$(".payways").before("-" + $(this).html());
+		});
 		
+		/*$("#submit-log").click(function () {
+			$(".dialog-zhezhao").stop(true).fadeToggle(500).toggleClass("hide");
+			$(".dialog-info").stop(true).fadeToggle(1000).toggleClass("hide");
+			$(".tips").html("注册成功");
+		});*/
 		
-		
-		
-		
-		
+		$.getJSON("http://localhost/Fruitday/Fruitday/Login.php", function (data){
+			console.log(data);
+				$("#submit-log").click(function () {
+					var 
+						oMobile = $("#user").val(),
+						oPasswd = $("#passwd").val();
+						console.log(oPasswd);
+					$(".dialog-zhezhao").stop(true).fadeToggle(500).toggleClass("hide");
+					$(".dialog-info").stop(true).fadeToggle(1000).toggleClass("hide");		
+					for (let i = 0; i < data.length; i ++) {
+						console.log(oMobile === data[i].account);
+						if (oMobile === data[i].account && oPasswd === data[i].password) {
+							$(".tips").html("登陆成功");
+						}else{
+							$(".tips").html("用户名或密码错误");
+						}
+					}
+				});
+		});
 		
 		
 		
