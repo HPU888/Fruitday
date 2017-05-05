@@ -84,7 +84,7 @@ require(["jquery", "cookie", "index"], function ($, cookie, index) {
 		
 		
 		
-		// 加减号改变商品
+		// 减号改变商品数量
 		$(".btn-minus").click(function () {
 			var totalPrice = 0;
 			if (parseInt($(this).next().val()) > 1) {
@@ -116,7 +116,7 @@ require(["jquery", "cookie", "index"], function ($, cookie, index) {
 			cookie.setCookie("goods", JSON.stringify(aCookie), 7);
 			cookie.setCookie("total", aTotal, 7);
 		});
-		
+		// 加号改变商品数量
 		$(".btn-plus").click(function () {
 			var totalPrice = 0;
 			for (var i = 0; i < aCookie.length; i ++) {

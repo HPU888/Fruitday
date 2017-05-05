@@ -1,0 +1,235 @@
+
+.list-content{
+	width: 1280px;
+	margin: 48px auto 0;
+}
+.list-content .title{
+	border-bottom: 1px solid #64a131;
+}
+.list-content .title h6{
+	font-size: 18px;
+    background: #64a131;
+    font-weight: normal;
+    color: #fff;
+    height: 32px;
+    width: 124px;
+    text-align: center;
+    line-height: 32px;
+}
+.list-content .list-detail{
+	margin-top: 58px;
+}
+.list-content .list-detail ul li{
+	overflow: hidden;
+}
+.list-content .list-detail ul li .time{
+	padding-right: 12px;
+    width: 96px;
+}
+.list-content .list-detail ul li .pic{
+	display: inline-block;
+    width: 23px;
+    height: 151px;
+    background: url(../images/list.png) no-repeat;
+    margin-right: 35px;
+}
+.list-content .list-detail ul li .descripe{
+	border: 1px solid #ddd;
+    width: 1126px;
+    margin-top: 11px;
+    padding: 20px 35px;
+}
+.list-content .list-detail ul li .descripe .caption{
+	white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.list-content .list-detail ul li .descripe .caption a{
+	font-size: 18px;
+    color: #555;
+    outline: none;
+}
+.list-content .list-detail ul li .descripe .main{
+	white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.list-content .list-detail ul li .descripe .main a{
+	font-size: 14px;
+    color: #999;
+    outline: none;
+}
+
+.btn-toolbar{
+	width: 1280px;
+    margin-top: 56px;
+    margin-left: 0;
+}
+.btn-toolbar .page-content{
+	text-align: center;
+    margin: 0 auto;
+    padding-bottom: 6px;
+    padding-top: 6px;
+    background-color: #f1f1f1;
+}
+.btn-toolbar .page-content>a{
+	color: #555;
+    cursor: pointer;
+}
+.btn-toolbar .page-content a:hover{
+	color: #64A131;
+	text-decoration: underline;
+}
+.btn-toolbar .page-content .prev{
+	width: 65px;
+    margin-left: 18px;
+    display: inline-block;
+}
+.btn-toolbar  .prev a, .btn-toolbar .next a{
+	display: block;
+    width: 65px;
+    height: 20px;
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 5px;
+    font-family: 'Hiragino Sans GB','微软雅黑',sans-serif;
+    color: #555555;
+    cursor: pointer;
+}
+.btn-toolbar .page-content .pagenum{
+	display: inline-block;
+    margin-top: 3px;
+}
+.btn-toolbar .page-content .pagenum a{
+	display: inline-block;
+    height: 26px;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 14px;
+    font-family: 'Hiragino Sans GB','微软雅黑',sans-serif;
+    line-height: 26px;
+    text-align: center;
+    color: #555555;
+}
+.btn-toolbar .page-content .pagenum a.cur{
+	min-width: 26px;
+    border-radius: 13px;
+    padding-left: 3px;
+    padding-right: 3px;
+    height: 26px;
+    color: #ffffff;
+    background: #64a131;
+}
+.btn-toolbar .page-content .next{
+	width: 65px;
+    margin-right: 18px;
+    display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

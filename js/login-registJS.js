@@ -12,8 +12,10 @@ require(["jquery", "cookie", "index"], function ($, cookie, index) {
 			oSecond = $("#timeout").html(),
 			oTimer  = null,
 			verifyCode = new GVerify("yanzmimg");
-			
-		
+		// 点击刷新验证码	
+		$(".update").click(function () {
+			var res = verifyCode.validate($("#verify").val());
+		});
 		
 		$("#submit-reg").click(function () {
 			var 
@@ -29,12 +31,13 @@ require(["jquery", "cookie", "index"], function ($, cookie, index) {
 			
 			// 验证码
 			if (res) {
-				$(".yanzm").children("span").eq(0).removeClass("hide");
+				$("#verify").next().removeClass("hide");
+				$("#verify").next().removeClass("iconError");
 			}else{
 				$("#verify").next().removeClass("hide").addClass("iconError");
 				$(".dialog-zhezhao").stop(true).fadeToggle(500).toggleClass("hide");
 				$(".dialog-info").stop(true).fadeToggle(1000).toggleClass("hide");
-				//(".tips").html("验证码有误！");
+				// (".tips").html("验证码有误");
 			}
 			
 			// 判断用户手机号
@@ -43,7 +46,9 @@ require(["jquery", "cookie", "index"], function ($, cookie, index) {
 				$(".dialog-zhezhao").stop(true).fadeToggle(500).toggleClass("hide");
 				$(".dialog-info").stop(true).fadeToggle(1000).toggleClass("hide");
 				$("#user").next().removeClass("hide").addClass("iconError");
-				$(".tips").html("您输入的手机号有误，请核对后重新输入！");
+				$(".tips").html("您输入的手机号有误，请核对后重新输入");
+			}else{
+				$("#user").next().removeClass("hide").removeClass("iconError");
 			}
 			
 			// 验证密码
@@ -51,18 +56,29 @@ require(["jquery", "cookie", "index"], function ($, cookie, index) {
 				$(".dialog-zhezhao").stop(true).fadeToggle(500).toggleClass("hide");
 				$(".dialog-info").stop(true).fadeToggle(1000).toggleClass("hide");
 				$("#passwd").next().removeClass("hide").addClass("iconError");
-				$(".tips").html("密码长度不能小于6位！");
+				$(".tips").html("密码长度不能小于6位");
+			}else{
+				$("#passwd").next().removeClass("hide").removeClass("iconError");
+				$("#Apasswd").next().removeClass("hide").removeClass("iconError");
 			}
-			if(oPasswd !== Apasswd || Apasswd === "") {
+			if(oPasswd !== Apasswd) {
 				$(".dialog-zhezhao").stop(true).fadeToggle(500).toggleClass("hide");
 				$(".dialog-info").stop(true).fadeToggle(1000).toggleClass("hide");
 				$("#Apasswd").next().removeClass("hide").addClass("iconError");
-				$(".tips").html("两次输入的密码不一致，检查后请重新输入！");
+				$(".tips").html("两次输入的密码不一致，检查后请重新输入");
 			}
-			if (!oRegMobile.test(oMobile) && oPasswd.length === 0 && Apasswd.length === 0 && oYanzm === "" && Mbyanzm === "") {
+			else{
+				$("#Apasswd").next().removeClass("hide").removeClass("iconError");
+			}
+			if (!oRegMobile.test(oMobile) && oPasswd.length === 0 && Apasswd.length === 0 && oYanzm === "") {
 				$(".dialog-zhezhao").stop(true).fadeToggle(500).toggleClass("hide");
 				$(".dialog-info").stop(true).fadeToggle(1000).toggleClass("hide");
-				$(".tips").html("请填写信息！");
+				$(".tips").html("请填写信息");
+			}
+			if (oRegMobile.test(oMobile) && oPasswd.length > 6 && Apasswd.length > 6 && res && oPasswd === Apasswd) {
+				$(".dialog-zhezhao").stop(true).fadeToggle(500).toggleClass("hide");
+				$(".dialog-info").stop(true).fadeToggle(1000).toggleClass("hide");
+				$(".tips").html("注册成功");
 			}
 			
 			

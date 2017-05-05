@@ -267,25 +267,85 @@ require(["jquery"], function ($) {
 			$(".tips").html("注册成功");
 		});*/
 		
-		$.getJSON("http://localhost/Fruitday/Fruitday/Login.php", function (data){
-			console.log(data);
-				$("#submit-log").click(function () {
-					var 
-						oMobile = $("#user").val(),
-						oPasswd = $("#passwd").val();
-						console.log(oPasswd);
-					$(".dialog-zhezhao").stop(true).fadeToggle(500).toggleClass("hide");
-					$(".dialog-info").stop(true).fadeToggle(1000).toggleClass("hide");		
-					for (let i = 0; i < data.length; i ++) {
-						console.log(oMobile === data[i].account);
-						if (oMobile === data[i].account && oPasswd === data[i].password) {
-							$(".tips").html("登陆成功");
-						}else{
-							$(".tips").html("用户名或密码错误");
-						}
+		
+		// 登陆页面验证
+		$.getJSON("Login.php", function (data){
+			// console.log(data);
+			$("#submit-log").click(function () {
+				var 
+					oMobile = $("#user").val(),
+					oPasswd = $("#passwd").val();
+				$(".dialog-zhezhao").stop(true).fadeToggle(500).toggleClass("hide");
+				$(".dialog-info").stop(true).fadeToggle(1000).toggleClass("hide");	
+				var bBtn = false;
+				for (var i = 0; i < data.length; i ++) {
+					if (oMobile === data[i].account && oPasswd === data[i].password) {
+						bBtn = true;
+						break;
 					}
-				});
+				}
+				if (bBtn) {
+					$(".send-yanzm span").removeClass("hide").removeClass("iconError");
+					$(".password span").removeClass("hide").removeClass("iconError");
+					$(".tips").html("登陆成功");
+				}else{
+					$(".send-yanzm span").removeClass("hide").addClass("iconError");
+					$(".password span").removeClass("hide").addClass("iconError");
+					$(".tips").html("用户名或密码错误");
+				}
+			});
 		});
+		
+		
+		
+		
+		// 果园公告内容获取
+		$.get("notice.php",{
+			page : 1
+		}, function (data) {
+			// console.log(data);
+			data.forEach(function (v) {
+				$(".list-detail ul").append(`<li>
+						<span class="time flt"></span>
+						<span class="pic flt"></span>
+						<div class="descripe flt">
+							<p class="caption">
+								<a href="javascript:;">${v.caption}</a>
+							</p>
+							<p class="main">
+								<a href="javascript:;">${v.main}</a>
+							</p>
+						</div>
+					</li>`);
+			});
+		}, "json");
+		
+		$(".pagenum a").click(function () {
+			$(".pagenum a").removeClass("cur");
+			$(this).addClass("cur");
+			$(".list-detail ul").empty();
+			$.get("notice.php",{
+				page : $(this).text()
+			}, function (data) {
+				// console.log(data);
+				data.forEach(function (v) {
+					$(".list-detail ul").append(`<li>
+							<span class="time flt"></span>
+							<span class="pic flt"></span>
+							<div class="descripe flt">
+								<p class="caption">
+									<a href="javascript:;">${v.caption}</a>
+								</p>
+								<p class="main">
+									<a href="javascript:;">${v.main}</a>
+								</p>
+							</div>
+						</li>`);
+				});
+			}, "json");
+		});
+			
+		
 		
 		
 		

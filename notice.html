@@ -2,29 +2,29 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>天天果园-水果网购首选品牌,只为一份极致的新鲜!</title>
+		<title>天天果园-水果网购|生鲜食品|蔬菜配送首选品牌，只为一份极致</title>
 		<link rel="stylesheet" type="text/css" href="css/common.css"/>
-		<link rel="stylesheet" type="text/css" href="css/login-register.css"/>
-		<script src="js/require.js" data-main="js/login-registJS"></script>
-		<script src="js/gVerify.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/notice.css"/>
+		<script src="js/require.js" data-main="js/homeJS"></script>
 	</head>
 	<body>
 		
 		<!--遮罩层对话框-->	
-		<div id="dialog" class="dialog-open">
-			<div class="dialog-zhezhao hide"></div>
-			<div class="dialog-info hide" style="width: 360px;margin-left: -180px;">
+		<div id="dialog" class="dialog-open hide">
+			<div class="dialog-zhezhao"></div>
+			<div class="dialog-info" style="width: 360px;margin-left: -180px;">
 				<h5 class="dialog-title">
 					信息提示<span class="close frt"><img src="images/cha.png"/></span>
 				</h5>
 				<div class="dialog-content" style="min-height: 80px;padding-top: 30px;">
 					<p class="clearfix">
 						<span class="dialog-icon"></span>
-						<span class="tips flt">0</span>
+						<span class="tips flt">请先登录</span>
 					</p>
 				</div>
 			</div>
 		</div>
+		
 		
 		<section class="common-header">
 			<div class="topnav">
@@ -60,10 +60,10 @@
 								</ul>
 								<h5>选择城市:</h5>
 								<ul class="hotcity-list clearfix">
-									<li>
+									<li class="sp-city">
 										<a href="javascript:;">上海</a>
 									</li>
-									<li>
+									<li class="sp-city">
 										<a href="javascript:;">上海崇明</a>
 									</li>
 									<li>
@@ -136,10 +136,10 @@
 											<a href="javascript:;">宜城</a>
 										</div>
 									</li>
-									<li>
+									<li class="sp-city">
 										<a href="javascript:;">北京</a>
 									</li>
-									<li>
+									<li class="sp-city">
 										<a href="javascript:;">天津</a>
 									</li>
 									<li>
@@ -275,88 +275,144 @@
 					<div class="navbar-logo flt">
 						<a href="home.html"><img src="images/logo.svg" /></a>
 					</div>
+					<div class="navbar-list flt">
+						<ul>
+							<li>
+								<a href="home.html">首页
+									<span>Home</span>
+								</a>
+								<em class="hide"></em>
+							</li>
+							<li>
+								<a href="fresh-fruit.html">鲜果
+									<span>Fruit</span>
+								</a>
+								<em class="hide"></em>
+							</li>
+							<li>
+								<a href="javascript:;">生鲜
+									<span>Fresh</span>
+								</a>
+								<em class="hide"></em>
+							</li>
+							<li>
+								<a href="javascript:;">礼品
+									<span>Gift</span>
+								</a>
+								<em class="hide"></em>
+							</li>
+							<li>
+								<a href="javascript:;">会员中心
+									<span>Vip Club</span>
+								</a>
+								<em class="hide"></em>
+							</li>
+						</ul>
+					</div>
+					<div class="navbar-right frt">
+						<div class="common-topsearch flt">
+							<input type="search" id="search-keyword" value="奇异果" placeholder="请输入关键字"/>
+							<button id="search-buttom">
+								<i class="iconfont">&#xe693;</i>
+							</button>
+							<div class="hotsearch">
+								热门：
+								<a href="http://www.fruitday.com/prolist/search/橙" target="_blank">橙</a>
+								<a href="http://www.fruitday.com/prolist/search/提子" target="_blank">提子</a>
+								<a href="http://www.fruitday.com/prolist/search/蓝莓" target="_blank">蓝莓</a>
+								<a href="http://www.fruitday.com/prolist/search/苹果" target="_blank">苹果</a>
+							</div>
+							<ul class="subsearch hide">
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+						</div>
+						<div class="common-minicart flt">
+							<div id="minicart" class="">
+								<i class="iconfont cartbg"></i>
+								<i class="iconfont icon-cart">&#xe63f;</i>
+								<span class="cartnum">0</span>
+							</div>
+							<div class="cartcont hide">
+								<i class="iconfont">&#xe7a8;</i>
+								<ul>
+									<!--<li>
+										<a href="javascript:;">
+											<img src="images/1-1270x270-2109-6C7A8XA9.jpg"/ class="flt">
+											<div class="minicart-info">
+												<h5>洪山樱桃</h5>
+												<h5>￥178.00/2斤</h5>
+											</div>
+										</a>
+										<div class="mincart-modify">
+											<span class="minicart-act btn-minus">-</span>
+											<input class="set-num-in" type="text" value="0" />
+											<span class="minicart-act btn-plus">+</span>
+										</div>
+										<span class="mini-cartlist-delete mincart-delete">删除</span>
+									</li>-->
+								</ul>
+								<div class="cart-nothing hide">
+									<h5>购物车中还没有商品，赶紧选购吧！</h5>
+								</div>
+								<div class="minicart-pay clearfix hide">
+									<div class="flt">
+										共 <span class="color-green cartcount">2</span> 件商品
+									</div>
+									<div class="frt">
+										商品小计 <span class="color-green cartprice1">998.00</span>
+									</div>
+									<button id="cartbtn" type="button" class="btn btn-lg">立即结算</button>
+								</div>
+							</div>
+						</div>
+					</div>
 				</nav>
 			</div>
 		</section>
 		
-		<!--注册会员-->
-		<div class="vip-login">
-			<p class="member">注册会员</p>
-			<div class="login-info" id="clean">
-				<div class="login-left flt">
-					<img src="images/huiyuan.jpg"/>
-					<div class="login">
-						<a href="login.html" class="btn-primary btn-lg active login-btn" title="点击此按钮，登录会员账号"> 会员登录></a>
+		<!--果园公告-->
+		<div class="list-content">
+			<div class="title">
+				<h6>果园公告</h6>
+			</div>
+			<div class="list-detail">
+				<ul>
+					<!--<li>
+						<span class="time flt"></span>
+						<span class="pic flt"></span>
+						<div class="descripe flt">
+							<p class="caption">
+								<a href="javascript:;">全仓充值活动调整公告</a>
+							</p>
+							<p class="main">
+								<a href="javascript:;">亲爱的果友们：果园全仓充值赠品调整如下：全仓单笔订单充值满1000元赠新奇士美国晚熟脐橙12个，价值99元。全仓单笔订单充值满2000元赠新奇士美国晚熟脐橙12个、新西兰皇后红玫瑰苹果12个，价值156元。注：（充值卡券充值除外），成都仓不参与本活动；充值卡充值无法开具发票欲知更多活动，敬请关注天天果园！</a>
+							</p>
+						</div>
+					</li>-->
+				</ul>
+			</div>
+			<div class="btn-toolbar">
+				<div class="page-content">
+					<a href="notice.html">< 首页</a>
+					<div class="prev">
+						<a href="javascript:;">上一页</a>
 					</div>
-				</div>
-				<div class="login-right frt">
-					<div class="login-form">
-						<ul>
-							<li id="clean">
-								<div class="text02 flt">
-									<span class="mobile">手机号</span>
-								</div>
-								<div class="send-yanzm flt">
-									<input type="text" id="user" class="form-control" />
-									<span class="hide true"></span>
-								</div>
-							</li>
-							<li id="clean">
-								<div class="text04 flt">
-									<span class="code">密码</span>
-								</div>
-								<div class="password flt">
-									<input type="password" id="passwd"  class="form-control" placeholder="请输入6-20位号码字符" />
-									<span class="hide true"></span>
-								</div>
-							</li>
-							<li id="clean">
-								<div class="text05 flt">
-									<span class="code">确认密码</span>
-								</div>
-								<div class="Apassword flt">
-									<input type="password" id="Apasswd"  class="form-control" placeholder="请输入6-20位号码字符" />
-									<span class="hide true"></span>
-								</div>
-							</li>
-							<li id="clean">
-								<div class="text01 flt">
-									<span class="form1">验证码</span>
-								</div>
-								<div class="yanzm flt">
-									<input type="text" id="verify"  class="flt form-control" />
-									<span class="hide true"></span>
-									<span class="yanzm-img" id="yanzmimg">
-										<!--<img class="auth-img" src="images/register.jpg"/>-->
-									</span>
-									<span class="update auth-img"></span>
-								</div>
-							</li>
-							<li id="clean">
-								<div class="text03 flt">
-									<span class="text">手机验证码</span>
-								</div>
-								<div class="mobile-yanzm flt">
-									<input type="text" id="telverify"  class="hasError form-control" />
-									<span class="hide true"></span>
-									<div class="send" id="getcode">
-										<span>发送验证码</span>
-										<span class="hide">还剩<b id="timeout">59</b>秒</span>
-									</div>
-								</div>
-							</li>
-							<li id="clean">
-								<div class="fruit-login frt">
-									<div class="fr-regist flt">
-										<a href="javascript:;" id="submit-reg">注册</a>
-									</div>
-									<div class="fr-login flt">
-										<a href="login.html">会员登录</a>
-									</div>
-								</div>
-							</li>
-						</ul>
+					<div class="pagenum">
+						<a href="javascript:;" class="cur">1</a>
+						<a href="javascript:;">2</a>
+						<a href="javascript:;">3</a>
+						<a href="javascript:;">4</a>
+						<a href="javascript:;">5</a>
 					</div>
+					<div class="next">
+						<a href="javascript:;">下一页</a>
+					</div>
+					<a href="javascript:;">最后一页 ></a>
 				</div>
 			</div>
 		</div>
@@ -442,7 +498,5 @@
 				</div>
 			</div>
 		</section>
-	
-	
 	</body>
 </html>
