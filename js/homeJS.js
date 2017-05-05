@@ -4,7 +4,7 @@ require.config({
 	index: "js/index"
 });
 
-require(["jquery", "cookie", "index"], function ($, cookie, index) {
+require(["jquery", "cookie", "index"], function ($, cookie, index,) {
 		
 	$(function (){
 		var total = 0;
@@ -413,6 +413,7 @@ require(["jquery", "cookie", "index"], function ($, cookie, index) {
 			cookie.setCookie("goods", JSON.stringify(aGoods), 7);
 			cookie.setCookie("total", total, 7);
 		});
+		
 		
 	});
 });

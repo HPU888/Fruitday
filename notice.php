@@ -186,7 +186,7 @@
 	
 	$data = array_chunk($data, 10);
 
-	// 每页显示3条数据
+	// 每页显示10条数据
 	$page = $_GET["page"];
 
 	echo json_encode($data[$page-1]);

@@ -300,7 +300,7 @@ require(["jquery"], function ($) {
 		
 		
 		// 果园公告内容获取
-		$.get("notice.php",{
+		$.getJSON("notice.php",{
 			page : 1
 		}, function (data) {
 			// console.log(data);
@@ -318,13 +318,13 @@ require(["jquery"], function ($) {
 						</div>
 					</li>`);
 			});
-		}, "json");
+		});
 		
 		$(".pagenum a").click(function () {
 			$(".pagenum a").removeClass("cur");
 			$(this).addClass("cur");
 			$(".list-detail ul").empty();
-			$.get("notice.php",{
+			$.getJSON("notice.php",{
 				page : $(this).text()
 			}, function (data) {
 				// console.log(data);
@@ -342,7 +342,7 @@ require(["jquery"], function ($) {
 							</div>
 						</li>`);
 				});
-			}, "json");
+			});
 		});
 			
 		
